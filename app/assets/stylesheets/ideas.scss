@@ -1,0 +1,30 @@
+// Place all the styles related to the Ideas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+nav{
+  width: 100%;
+  border-style: solid;
+  text-align: center;
+  font-size: 16px;
+  color: Black;
+  margin: 0;
+  padding: 0
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{
+    display: inline-block;
+    padding: 10px;
+    color: black;
+}
