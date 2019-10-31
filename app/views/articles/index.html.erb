@@ -1,0 +1,55 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h1>Our Web Page</h1>
+
+<nav>
+    <ul>
+        <li><a href = "/ideas/index">Home</a></li>
+        <li><%= link_to 'New article', new_article_path %></li>
+        <li><a>Old</a></li>
+    </ul>
+<nav/>
+
+<div class = "description">
+    <p>Welcome to our blog</p>
+    <p>Select one of the blocks below to with some questions</p>
+</div>
+
+<div class = "content">
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <div class = "block b1">
+      <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td><%= link_to 'Destroy',
+                                article_path(article),
+                                method: :delete,
+                                data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    </div>
+  <% end %>
+  
+  
+</table>
+
+    <div class = "block b1">block 1</div>
+    <div class = "block b2">block 2</div>
+    <div class = "block b3">block 3</div>
+    <div class = "block b4">block 4</div>
+    <div class = "block b5">block 5</div>
+    <div class = "block b6">block 6</div>
+    
+</div>
+
+ <footer class = "copyright">
+   <p>&copy; ITCS-3155 Group 10</p>
+ </footer>
