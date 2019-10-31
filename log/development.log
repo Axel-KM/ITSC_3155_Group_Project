@@ -1619,3 +1619,406 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:13:24 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 271ms (Views: 264.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:13:27 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-29 17:13:29 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 29ms (Views: 24.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/index" for 152.15.113.4 at 2019-10-29 17:13:39 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/ideas/index"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/articles" for 152.15.113.4 at 2019-10-29 17:13:46 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-29 17:13:48 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-29 17:13:49 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-29 17:13:49 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-29 17:13:50 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-29 17:13:50 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:14:01 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:34:17 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 244ms (Views: 237.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:35:21 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:38:06 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:38:37 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:38:38 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-29 17:38:41 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 29ms (Views: 24.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:39:08 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:39:09 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:39:31 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:39:51 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:39:53 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:40:12 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:40:34 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:40:55 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:40:58 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-29 17:41:00 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:41:53 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:42:57 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:43:24 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:43:25 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:43:31 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:43:43 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:43:43 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-29 17:46:27 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-29 17:46:32 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-31 17:04:14 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 357ms (Views: 348.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-31 17:04:22 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 33ms (Views: 26.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/new" for 152.15.113.4 at 2019-10-31 17:05:04 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (16.3ms)
+  Rendered articles/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-31 17:05:10 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-31 17:05:13 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-10-31 17:05:22 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 152.15.113.4 at 2019-10-31 17:05:24 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+

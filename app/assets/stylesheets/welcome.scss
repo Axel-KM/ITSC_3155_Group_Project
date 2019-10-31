@@ -13,3 +13,35 @@ html,body{
   height: 100%;
   width: 100%;
 }
+
+.content{
+   height: 100vh;
+    width: 100vw;
+    min-width: 1000px;
+    min-height: 1000px;
+    position: relative;
+    display: inline-block;
+    margin: auto auto;
+}
+
+.myBlogLink{
+  width: 200px;
+  height: 200px;
+  background:url("sitebg2.jpg") no-repeat;
+  display: inline-block;
+  color: white;
+  line-height: 150px;
+  text-align: center;
+  left: 40%;
+  right: 60%;
+  position: absolute;
+   
+}
+
+a{
+  color : white;
+  font-weight: bold;
+  font-family: "Brush Script MT";
+  font-size: 30px;
+  
+}
