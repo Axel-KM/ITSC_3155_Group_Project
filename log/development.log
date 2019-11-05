@@ -1854,3 +1854,601 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/articles" for 152.15.113.5 at 2019-11-05 18:57:20 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 263ms (Views: 250.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 152.15.113.5 at 2019-11-05 19:04:10 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.append=( #link_to 'Destroy',article_path(article), meth...
+...                        ^~~~~~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+... :delete, data: { confirm: 'Are you sure?' } );@output_buffe...
+...                            ^~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+    </div>
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:36: unknown regexp options - tabl
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">bl...
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b1">block 1</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+    <!--<div class = "block b3">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b3">block 3</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+    <!--<div class = "block b5">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b5">block 5</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:48: unknown regexp option - p
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+ </footer>
+ ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+          end
+              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/articles/index.html.erb:36: unknown regexp options - tabl
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:39: unknown regexp options - dv
+app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:41: unknown regexp options - dv
+app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:43: unknown regexp options - dv
+app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:48: unknown regexp option - p
+app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/articles" for 152.15.113.5 at 2019-11-05 19:05:19 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.append=( #link_to 'Destroy',article_path(article), meth...
+...                        ^~~~~~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+... :delete, data: { confirm: 'Are you sure?' } );@output_buffe...
+...                            ^~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+    </div>
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:36: unknown regexp options - tabl
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">bl...
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b1">block 1</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+    <!--<div class = "block b3">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b3">block 3</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+    <!--<div class = "block b5">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b5">block 5</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:48: unknown regexp option - p
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+ </footer>
+ ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+          end
+              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/articles/index.html.erb:36: unknown regexp options - tabl
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:39: unknown regexp options - dv
+app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:41: unknown regexp options - dv
+app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:43: unknown regexp options - dv
+app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:48: unknown regexp option - p
+app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/articles" for 152.15.113.5 at 2019-11-05 19:05:21 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.append=( #link_to 'Destroy',article_path(article), meth...
+...                        ^~~~~~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+... :delete, data: { confirm: 'Are you sure?' } );@output_buffe...
+...                            ^~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+    </div>
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:36: unknown regexp options - tabl
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">bl...
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b1">block 1</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+    <!--<div class = "block b3">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b3">block 3</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+    <!--<div class = "block b5">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b5">block 5</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:48: unknown regexp option - p
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+ </footer>
+ ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+          end
+              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/articles/index.html.erb:36: unknown regexp options - tabl
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:39: unknown regexp options - dv
+app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:41: unknown regexp options - dv
+app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:43: unknown regexp options - dv
+app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:48: unknown regexp option - p
+app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 152.15.113.5 at 2019-11-05 19:05:24 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 221ms (Views: 220.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 152.15.113.5 at 2019-11-05 19:05:26 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.append=( #link_to 'Destroy',article_path(article), meth...
+...                        ^~~~~~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+... :delete, data: { confirm: 'Are you sure?' } );@output_buffe...
+...                            ^~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+    </div>
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:36: unknown regexp options - tabl
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">bl...
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b1">block 1</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+    <!--<div class = "block b3">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b3">block 3</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+    <!--<div class = "block b5">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b5">block 5</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:48: unknown regexp option - p
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+ </footer>
+ ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+          end
+              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/articles/index.html.erb:36: unknown regexp options - tabl
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:39: unknown regexp options - dv
+app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:41: unknown regexp options - dv
+app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:43: unknown regexp options - dv
+app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:48: unknown regexp option - p
+app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/articles" for 152.15.113.5 at 2019-11-05 19:05:53 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.append=( #link_to 'Destroy',article_path(article), meth...
+...                        ^~~~~~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+... :delete, data: { confirm: 'Are you sure?' } );@output_buffe...
+...                            ^~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+    </div>
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:36: unknown regexp options - tabl
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">bl...
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b1">block 1</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+    <!--<div class = "block b3">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b3">block 3</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+    <!--<div class = "block b5">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b5">block 5</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:48: unknown regexp option - p
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+ </footer>
+ ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+          end
+              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/articles/index.html.erb:36: unknown regexp options - tabl
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:39: unknown regexp options - dv
+app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:41: unknown regexp options - dv
+app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:43: unknown regexp options - dv
+app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:48: unknown regexp option - p
+app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 152.15.113.5 at 2019-11-05 19:05:56 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 217ms (Views: 216.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 152.15.113.5 at 2019-11-05 19:05:58 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.append=( #link_to 'Destroy',article_path(article), meth...
+...                        ^~~~~~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+... :delete, data: { confirm: 'Are you sure?' } );@output_buffe...
+...                            ^~~
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+    </div>
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:36: unknown regexp options - tabl
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">bl...
+    ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+    <!--<div class = "block b1">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b1">block 1</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+    <!--<div class = "block b3">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b3">block 3</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+    <!--<div class = "block b5">block ...
+        ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+...<div class = "block b5">block 5</div>-->
+...                              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: unknown regexp options - dv
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:48: unknown regexp option - p
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+ </footer>
+ ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+          end
+              ^
+/home/ec2-user/environment/ITSC_3155_Group_Project/app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/articles/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/articles/index.html.erb:36: unknown regexp options - tabl
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected '<'
+app/views/articles/index.html.erb:38: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:39: unknown regexp options - dv
+app/views/articles/index.html.erb:39: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:40: syntax error, unexpected '<'
+app/views/articles/index.html.erb:40: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:41: unknown regexp options - dv
+app/views/articles/index.html.erb:41: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:42: syntax error, unexpected '<'
+app/views/articles/index.html.erb:42: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/articles/index.html.erb:43: unknown regexp options - dv
+app/views/articles/index.html.erb:43: syntax error, unexpected '\n', expecting do (for lambda) or tLAMBEG
+app/views/articles/index.html.erb:48: unknown regexp option - p
+app/views/articles/index.html.erb:49: syntax error, unexpected '<'
+app/views/articles/index.html.erb:54: unterminated regexp meets end of file
+app/views/articles/index.html.erb:54: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/articles" for 152.15.113.5 at 2019-11-05 19:06:55 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 222ms (Views: 211.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 152.15.113.5 at 2019-11-05 19:06:58 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 152.15.113.5 at 2019-11-05 19:07:00 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:26
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/2" for 152.15.113.5 at 2019-11-05 19:07:03 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered articles/show.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 77ms (Views: 71.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/2" for 152.15.113.5 at 2019-11-05 19:07:08 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered articles/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/2" for 152.15.113.5 at 2019-11-05 19:07:57 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered articles/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/2" for 152.15.113.5 at 2019-11-05 19:08:36 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered articles/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/2" for 152.15.113.5 at 2019-11-05 19:09:23 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered articles/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/2" for 152.15.113.5 at 2019-11-05 19:11:26 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered articles/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+

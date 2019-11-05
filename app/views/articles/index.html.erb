@@ -25,28 +25,20 @@
  
   <% @articles.each do |article| %>
     <div class = "block b1">
-      <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy',
-                                article_path(article),
-                                method: :delete,
-                                data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <%= article.title %>
+        <%= link_to 'Show', article_path(article) %>
     </div>
   <% end %>
   
   
 </table>
 
-    <div class = "block b1">block 1</div>
-    <div class = "block b2">block 2</div>
-    <div class = "block b3">block 3</div>
-    <div class = "block b4">block 4</div>
-    <div class = "block b5">block 5</div>
-    <div class = "block b6">block 6</div>
+    <!--<div class = "block b1">block 1</div>-->
+    <!--<div class = "block b2">block 2</div>-->
+    <!--<div class = "block b3">block 3</div>-->
+    <!--<div class = "block b4">block 4</div>-->
+    <!--<div class = "block b5">block 5</div>-->
+    <!--<div class = "block b6">block 6</div>-->
     
 </div>
 
