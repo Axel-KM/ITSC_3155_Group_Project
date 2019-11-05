@@ -39,7 +39,7 @@ input[type=button], input[type=submit]
 
 html,body{
     
-  background:url("sitebg.jpg") no-repeat center fixed;
+  background:url("bg.jpg") no-repeat center fixed;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -80,7 +80,7 @@ nav li{
 nav a{
     display: inline-block;
     padding: 10px;
-    color: black;
+    color: white;
 }
 
 .description{
@@ -97,6 +97,7 @@ nav a{
     position: relative;
     display: inline-block;
     margin: auto auto;
+    color: white;
 }
 
 .block{
@@ -122,6 +123,7 @@ nav a{
     height: 200px;
     background:url("backg.jpg");
     display: inline-block;
+    color: white;
     right: 55%;
     left: 45%;
     top: 5%;
@@ -135,6 +137,7 @@ nav a{
     height: 200px;
     background:url("sitebg3.jpg");
     display: inline-block;
+    color: white;
     top: 5%;
     bottom: 95%;
     right: 40%;

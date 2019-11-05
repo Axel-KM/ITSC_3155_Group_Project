@@ -3,7 +3,7 @@ h1 {
   color: blue; }
 
 html, body {
-  background: url("sitebg.jpg") no-repeat center fixed;
+  background: url("bg.jpg") no-repeat center fixed;
   background-size: cover;
   height: 100%;
   width: 100%; }
@@ -20,7 +20,7 @@ html, body {
 .myBlogLink {
   width: 200px;
   height: 200px;
-  background: url("sitebg2.jpg") no-repeat;
+  background: url("sitebg.jpg") no-repeat;
   display: inline-block;
   color: white;
   line-height: 150px;
