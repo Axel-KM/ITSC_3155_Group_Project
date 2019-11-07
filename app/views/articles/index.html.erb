@@ -1,4 +1,8 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <h1>Our Web Page</h1>
 
 <nav>
@@ -14,32 +18,19 @@
     <p>Select one of the blocks below to with some questions</p>
 </div>
 
-<div class = "content">
 
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
-  <% @articles.each do |article| %>
-    <div class = "block b1">
-        <%= article.title %>
-        <%= link_to 'Show', article_path(article) %>
+<div class = "container">
+    <% @articles.each do |article| %>
+    <div class = "box">
+        <div class = "icon"></div>
+        <div class = "content">
+            <h3>Search</h3>
+            <p>THIS IS IJDSFJ JSF:L JDS:LFJ DS:JF LD:J SD JDSLF</p>
+            <%= article.title %>
+            <%= link_to 'Show', article_path(article) %>
+        </div>
     </div>
-  <% end %>
-  
-  
-</table>
-
-    <!--<div class = "block b1">block 1</div>-->
-    <!--<div class = "block b2">block 2</div>-->
-    <!--<div class = "block b3">block 3</div>-->
-    <!--<div class = "block b4">block 4</div>-->
-    <!--<div class = "block b5">block 5</div>-->
-    <!--<div class = "block b6">block 6</div>-->
-    
+    <% end %>
 </div>
 
  <footer class = "copyright">

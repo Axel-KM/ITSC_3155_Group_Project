@@ -29,7 +29,7 @@ input[type=button], input[type=submit]
     cursor: pointer;
 }
 
-*{
+body{
   margin: 0;
   padding: 0;
 //   -moz-box-sizing: border-box;
@@ -37,13 +37,13 @@ input[type=button], input[type=submit]
   box-sizing: border-box;
 }
 
-html,body{
+// html{
     
-  background:url("bg.jpg") no-repeat center fixed;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
+//   background:url("bg.jpg") no-repeat center fixed;
+//   background-size: cover;
+//   height: 100%;
+//   width: 100%;
+// }
 
 // div{
 //     height: 100vh;
@@ -56,21 +56,23 @@ h1{
     font-family: "Brush Script MT";
 }
 
-nav{
-  width: 100%;
-  border-style: solid;
-  text-align: center;
-  font-size: 16px;
-  color: Black;
-  margin: 0;
-  padding: 0
-}
+// nav{
+//   width: 100%;
+//   border-style: solid;
+//   //text-align: center;
+//   font-size: 16px;
+//   color: Black;
+//   margin: 0;
+//   padding: 0
+// }
 
 nav ul{
     list-style-type: none;
+    text-align: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    border-style: solid;
 }
 
 nav li{
@@ -87,121 +89,186 @@ nav a{
     font-size : 20px;
     padding: 30px;
     font-weight: bold;
+    text-align: center;
+    color: white;
 }
 
-.content{
-    height: 100vh;
-    width: 100vw;
-    min-width: 1000px;
-    min-height: 1000px;
+
+// .block{
+//     text-align: center;
+// }
+
+// .b1{
+//     width: 200px;
+//     height: 200px;
+//     background:url("sitebg2.jpg") no-repeat;
+//     display: inline-block;
+//     color: white;
+//     left: 30%;
+//     right: 70%;
+//     top: 5%;
+//     bottom: 95%;
+//     position: absolute;
+//     line-height: 150px;
+// }
+
+// .b2{
+//     width: 200px;
+//     height: 200px;
+//     background:url("backg.jpg");
+//     display: inline-block;
+//     color: white;
+//     right: 55%;
+//     left: 45%;
+//     top: 5%;
+//     bottom: 95%;
+//     position: absolute;
+//     line-height: 150px;
+// }
+
+// .b3{
+//     width: 200px;
+//     height: 200px;
+//     background:url("sitebg3.jpg");
+//     display: inline-block;
+//     color: white;
+//     top: 5%;
+//     bottom: 95%;
+//     right: 40%;
+//     left: 60%;
+//     position: absolute;
+//     line-height: 150px;
+// }
+
+// .b4{
+//     width: 200px;
+//     height: 200px;
+//     background:url("sitebg3.jpg");
+//     display: inline-block;
+//     color: white;
+//     left: 30%;
+//     right: 70%;
+//     top: 30%;
+//     bottom: 70% ;
+//     position: absolute;
+//     line-height: 150px;
+// }
+
+// .b5{
+//     width: 200px;
+//     height: 200px;
+//     background:url("sitebg2.jpg");
+//     display: inline-block;
+//     color: white;
+//     right: 55%;
+//     left: 45%;
+//     top: 30%;
+//     bottom: 70% ;
+//     position: absolute;
+//     line-height: 150px;
+// }
+
+// .b6{
+//     width: 200px;
+//     height: 200px;
+//     background:url("backg.jpg");
+//     display: inline-block;
+//     color: white;
+//     right: 40%;
+//     left: 60%;
+//     top: 30%;
+//     bottom: 70% ;
+//     position: absolute;
+//     line-height: 150px;
+// }
+
+// .block{
+//     text-align: center;
+//     -webkit-animation: scaledown .4s ease;
+//     animation: scaledown .4s linear;
+//     animation-fill-mode: forward;
+//     transform-origin: 50% 50%;
+// }
+
+// .block:hover{
+//     z-index: 100;
+//     -webkit-animation: scale 0.4s ease;
+//     animation: scale 0.4s linear;
+//     animation-fill-mode: forward;
+//     transform-origin: 50% 50%;
+// }
+
+// new boxes
+.container
+{
     position: relative;
-    display: inline-block;
-    margin: auto auto;
-    color: white;
+    width: 1200px;
+    height: 300px;
+    margin: 240px auto;
 }
 
-.block{
-    text-align: center;
+.container .box{
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: #ff0;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.b1{
-    width: 200px;
-    height: 200px;
+.container .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background:url("sitebg2.jpg") no-repeat;
-    display: inline-block;
-    color: white;
-    left: 30%;
-    right: 70%;
-    top: 5%;
-    bottom: 95%;
-    position: absolute;
-    line-height: 150px;
+    transition: 0.5s;
+    z-index: 1;
 }
 
-.b2{
-    width: 200px;
-    height: 200px;
-    background:url("backg.jpg");
-    display: inline-block;
-    color: white;
-    right: 55%;
-    left: 45%;
-    top: 5%;
-    bottom: 95%;
-    position: absolute;
-    line-height: 150px;
+.container .box:hover .icon
+{
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
-.b3{
-    width: 200px;
-    height: 200px;
-    background:url("sitebg3.jpg");
-    display: inline-block;
-    color: white;
-    top: 5%;
-    bottom: 95%;
-    right: 40%;
-    left: 60%;
+.container .box .icon .fa
+{
     position: absolute;
-    line-height: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+    
 }
 
-.b4{
-    width: 200px;
-    height: 200px;
-    background:url("sitebg3.jpg");
-    display: inline-block;
-    color: white;
-    left: 30%;
-    right: 70%;
-    top: 30%;
-    bottom: 70% ;
-    position: absolute;
-    line-height: 150px;
+.container .box:hover .icon .fa{
+    font-size: 40px;
 }
 
-.b5{
-    width: 200px;
-    height: 200px;
-    background:url("sitebg2.jpg");
-    display: inline-block;
-    color: white;
-    right: 55%;
-    left: 45%;
-    top: 30%;
-    bottom: 70% ;
+.content .container .box{
     position: absolute;
-    line-height: 150px;
-}
-
-.b6{
-    width: 200px;
-    height: 200px;
-    background:url("backg.jpg");
-    display: inline-block;
-    color: white;
-    right: 40%;
-    left: 60%;
-    top: 30%;
-    bottom: 70% ;
-    position: absolute;
-    line-height: 150px;
-}
-
-.block{
+    height: 100%;
     text-align: center;
-    -webkit-animation: scaledown .4s ease;
-    animation: scaledown .4s linear;
-    animation-fill-mode: forward;
-    transform-origin: 50% 50%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.block:hover{
-    z-index: 100;
-    -webkit-animation: scale 0.4s ease;
-    animation: scale 0.4s linear;
-    animation-fill-mode: forward;
-    transform-origin: 50% 50%;
+.container .box .icon
+{
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .copyright{
