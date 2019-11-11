@@ -8,10 +8,12 @@ input[type=text]
     padding: 12px 12px;
     border: 2px solid #ccc;
     background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
 }
 textarea
 {
-    width: 100%;
+    width: 50%;
     height: 300px;
     padding: 12px 12px;
     border: 2px solid #ccc;
@@ -21,7 +23,7 @@ textarea
 input[type=button], input[type=submit]
 {
     background-color: #4CAF50;
-    float: right;
+    float: center;
     border: none;
     color: white;
     padding: 16px 20;
@@ -29,7 +31,7 @@ input[type=button], input[type=submit]
     cursor: pointer;
 }
 
-*{
+body{
   margin: 0;
   padding: 0;
 //   -moz-box-sizing: border-box;
@@ -37,18 +39,6 @@ input[type=button], input[type=submit]
   box-sizing: border-box;
 }
 
-html,body{
-    
-  background:url("sitebg.jpg") no-repeat center fixed;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-
-// div{
-//     height: 100vh;
-//     width: 100vw;
-// }
 
 h1{
     text-align: center;
@@ -56,149 +46,136 @@ h1{
     font-family: "Brush Script MT";
 }
 
-nav{
-  width: 100%;
-  border-style: solid;
-  text-align: center;
-  font-size: 16px;
-  color: Black;
+// nav{
+//   width: 100%;
+//   border-style: solid;
+//   //text-align: center;
+//   font-size: 16px;
+//   color: Black;
+//   margin: 0;
+//   padding: 0
+// }
+
+ul {
+  list-style-type: none;
   margin: 0;
-  padding: 0
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
 }
 
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-nav li{
-    display: inline;
-}
-
-nav a{
+li{
     display: inline-block;
-    padding: 10px;
-    color: black;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
 }
 
 .description{
     font-size : 20px;
     padding: 30px;
     font-weight: bold;
+    text-align: center;
+    color: white;
 }
 
-.content{
-    height: 100vh;
-    width: 100vw;
-    min-width: 1000px;
-    min-height: 1000px;
+.container
+{
     position: relative;
-    display: inline-block;
-    margin: auto auto;
+    width: 1200px;
+    height: 350px;
+    margin: 240px auto;
+    margin-top: 0px;
+    
 }
 
-.block{
-    text-align: center;
+.container .box{
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: #ff0;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.b1{
-    width: 200px;
-    height: 200px;
+.container .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background:url("sitebg2.jpg") no-repeat;
-    display: inline-block;
-    color: white;
-    left: 30%;
-    right: 70%;
-    top: 5%;
-    bottom: 95%;
-    position: absolute;
-    line-height: 150px;
+    transition: 0.5s;
+    z-index: 1;
 }
 
-.b2{
-    width: 200px;
-    height: 200px;
-    background:url("backg.jpg");
-    display: inline-block;
-    right: 55%;
-    left: 45%;
-    top: 5%;
-    bottom: 95%;
-    position: absolute;
-    line-height: 150px;
+.container .box:hover .icon
+{
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
-.b3{
-    width: 200px;
-    height: 200px;
-    background:url("sitebg3.jpg");
-    display: inline-block;
-    top: 5%;
-    bottom: 95%;
-    right: 40%;
-    left: 60%;
+.container .box .icon .fa
+{
     position: absolute;
-    line-height: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+    
 }
 
-.b4{
-    width: 200px;
-    height: 200px;
-    background:url("sitebg3.jpg");
-    display: inline-block;
-    color: white;
-    left: 30%;
-    right: 70%;
-    top: 30%;
-    bottom: 70% ;
-    position: absolute;
-    line-height: 150px;
+.container .box:hover .icon .fa{
+    font-size: 40px;
 }
 
-.b5{
-    width: 200px;
-    height: 200px;
-    background:url("sitebg2.jpg");
-    display: inline-block;
-    color: white;
-    right: 55%;
-    left: 45%;
-    top: 30%;
-    bottom: 70% ;
+.content {
     position: absolute;
-    line-height: 150px;
+    top: 70px;
+    left: 22%;
+    height: calc(100% - 100px);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
-.b6{
-    width: 200px;
-    height: 200px;
-    background:url("backg.jpg");
-    display: inline-block;
-    color: white;
-    right: 40%;
-    left: 60%;
-    top: 30%;
-    bottom: 70% ;
-    position: absolute;
-    line-height: 150px;
-}
-
-.block{
+.content a{
+    color: black;
     text-align: center;
-    -webkit-animation: scaledown .4s ease;
-    animation: scaledown .4s linear;
-    animation-fill-mode: forward;
-    transform-origin: 50% 50%;
 }
 
-.block:hover{
-    z-index: 100;
-    -webkit-animation: scale 0.4s ease;
-    animation: scale 0.4s linear;
-    animation-fill-mode: forward;
-    transform-origin: 50% 50%;
+
+
+
+.container .box .icon
+{
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .copyright{
