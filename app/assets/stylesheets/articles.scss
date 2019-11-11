@@ -8,10 +8,12 @@ input[type=text]
     padding: 12px 12px;
     border: 2px solid #ccc;
     background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
 }
 textarea
 {
-    width: 100%;
+    width: 50%;
     height: 300px;
     padding: 12px 12px;
     border: 2px solid #ccc;
@@ -21,7 +23,7 @@ textarea
 input[type=button], input[type=submit]
 {
     background-color: #4CAF50;
-    float: right;
+    float: center;
     border: none;
     color: white;
     padding: 16px 20;
@@ -37,18 +39,6 @@ body{
   box-sizing: border-box;
 }
 
-// html{
-    
-//   background:url("bg.jpg") no-repeat center fixed;
-//   background-size: cover;
-//   height: 100%;
-//   width: 100%;
-// }
-
-// div{
-//     height: 100vh;
-//     width: 100vw;
-// }
 
 h1{
     text-align: center;
@@ -66,23 +56,29 @@ h1{
 //   padding: 0
 // }
 
-nav ul{
-    list-style-type: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-style: solid;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
 }
 
-nav li{
-    display: inline;
-}
-
-nav a{
+li{
     display: inline-block;
-    padding: 10px;
-    color: white;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
 }
 
 .description{
@@ -93,118 +89,14 @@ nav a{
     color: white;
 }
 
-
-// .block{
-//     text-align: center;
-// }
-
-// .b1{
-//     width: 200px;
-//     height: 200px;
-//     background:url("sitebg2.jpg") no-repeat;
-//     display: inline-block;
-//     color: white;
-//     left: 30%;
-//     right: 70%;
-//     top: 5%;
-//     bottom: 95%;
-//     position: absolute;
-//     line-height: 150px;
-// }
-
-// .b2{
-//     width: 200px;
-//     height: 200px;
-//     background:url("backg.jpg");
-//     display: inline-block;
-//     color: white;
-//     right: 55%;
-//     left: 45%;
-//     top: 5%;
-//     bottom: 95%;
-//     position: absolute;
-//     line-height: 150px;
-// }
-
-// .b3{
-//     width: 200px;
-//     height: 200px;
-//     background:url("sitebg3.jpg");
-//     display: inline-block;
-//     color: white;
-//     top: 5%;
-//     bottom: 95%;
-//     right: 40%;
-//     left: 60%;
-//     position: absolute;
-//     line-height: 150px;
-// }
-
-// .b4{
-//     width: 200px;
-//     height: 200px;
-//     background:url("sitebg3.jpg");
-//     display: inline-block;
-//     color: white;
-//     left: 30%;
-//     right: 70%;
-//     top: 30%;
-//     bottom: 70% ;
-//     position: absolute;
-//     line-height: 150px;
-// }
-
-// .b5{
-//     width: 200px;
-//     height: 200px;
-//     background:url("sitebg2.jpg");
-//     display: inline-block;
-//     color: white;
-//     right: 55%;
-//     left: 45%;
-//     top: 30%;
-//     bottom: 70% ;
-//     position: absolute;
-//     line-height: 150px;
-// }
-
-// .b6{
-//     width: 200px;
-//     height: 200px;
-//     background:url("backg.jpg");
-//     display: inline-block;
-//     color: white;
-//     right: 40%;
-//     left: 60%;
-//     top: 30%;
-//     bottom: 70% ;
-//     position: absolute;
-//     line-height: 150px;
-// }
-
-// .block{
-//     text-align: center;
-//     -webkit-animation: scaledown .4s ease;
-//     animation: scaledown .4s linear;
-//     animation-fill-mode: forward;
-//     transform-origin: 50% 50%;
-// }
-
-// .block:hover{
-//     z-index: 100;
-//     -webkit-animation: scale 0.4s ease;
-//     animation: scale 0.4s linear;
-//     animation-fill-mode: forward;
-//     transform-origin: 50% 50%;
-// }
-
-// new boxes
 .container
 {
     position: relative;
     width: 1200px;
-    height: 300px;
+    height: 350px;
     margin: 240px auto;
+    margin-top: 0px;
+    
 }
 
 .container .box{
@@ -255,13 +147,28 @@ nav a{
     font-size: 40px;
 }
 
-.content .container .box{
+.content {
     position: absolute;
-    height: 100%;
-    text-align: center;
+    top: 70px;
+    left: 22%;
+    height: calc(100% - 100px);
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
 }
+
+.content a{
+    color: black;
+    text-align: center;
+}
+
+
+
 
 .container .box .icon
 {
