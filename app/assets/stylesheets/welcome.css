@@ -3,7 +3,7 @@ h1 {
   color: blue; }
 
 html, body {
-  background: url("bg.jpg") no-repeat center fixed;
+  background: url("qbg.jpg") no-repeat center fixed;
   background-size: cover;
   height: 100%;
   width: 100%; }
