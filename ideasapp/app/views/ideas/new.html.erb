@@ -20,17 +20,17 @@
     </p>
     <div>
         <%= radio_button_tag(:type, "Music") %>
-        <%= label_tag(:labelled, "this is about Music") %>
+        <%= label_tag(:labelled, "Music") %>
         <%= radio_button_tag(:type, "Movies") %>
-        <%= label_tag(:labelled, "this is about Movies") %>
+        <%= label_tag(:labelled, "Movies") %>
         <%= radio_button_tag(:type, "Theatre") %>
-        <%= label_tag(:labelled, "this is about Theatre") %>
+        <%= label_tag(:labelled, "Theatre") %>
         <%= radio_button_tag(:type, "Art") %>
-        <%= label_tag(:labelled, "this is about Art") %>
+        <%= label_tag(:labelled, "Art") %>
     </div>
     
-    <%= hidden_field_tag(:up_rank, "0") %>
-    <%= hidden_field_tag(:down_rank, "0") %>
-    <%= hidden_field_tag(:total_rank, "0") %>
+    <%= hidden_field_tag(:up_rank, 0) %>
+    <%= hidden_field_tag(:down_rank, 0) %>
+    <%= hidden_field_tag(:total_rank, 0) %>
     
 <%end%>
