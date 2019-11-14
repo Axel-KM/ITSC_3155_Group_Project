@@ -1,0 +1,22 @@
+<h1>Listing articles</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @idea.each do |id| %>
+    <tr>
+      <td><%= id.title %></td>
+      <td><%= id.text %></td>
+      <td><%= id.type %></td>
+      <td><%= id.labelled %></td>
+      <td><%= id.up_rank %></td>
+      <td><%= id.down_rank %></td>
+      <td><%= id.total_rank %></td>
+      <td><%= id.created_at %></td>
+      <td><%= link_to 'Show', ideas_path(id) %></td>
+    </tr>
+  <% end %>
+</table>

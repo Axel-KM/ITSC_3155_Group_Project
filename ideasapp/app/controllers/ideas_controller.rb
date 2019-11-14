@@ -1,4 +1,8 @@
 class IdeasController < ApplicationController
+    def index
+        @idea = Idea.all
+    end
+    
     def new
     end
         

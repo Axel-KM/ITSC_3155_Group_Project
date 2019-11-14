@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2019_11_14_201216) do
     t.string "title"
     t.string "type"
     t.string "labelled"
-    t.integer "up_rank",    :default => 0 
-    t.integer "down_rank",  :default => 0 
+    t.integer "up_rank", :default => 0 
+    t.integer "down_rank", :default => 0 
     t.integer "total_rank", :default => 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
