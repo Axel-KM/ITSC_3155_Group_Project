@@ -15,18 +15,18 @@
         <%= f.submit "Post Idea"%>
     </p>
     
-    <p>
-        <%= f.label :type %>
-    </p>
     <div>
-        <%= radio_button_tag(:type, "Music") %>
-        <%= label_tag(:labelled, "Music") %>
-        <%= radio_button_tag(:type, "Movies") %>
-        <%= label_tag(:labelled, "Movies") %>
-        <%= radio_button_tag(:type, "Theatre") %>
-        <%= label_tag(:labelled, "Theatre") %>
-        <%= radio_button_tag(:type, "Art") %>
-        <%= label_tag(:labelled, "Art") %>
+       
+        <%= f.radio_button :type, 'Music' %> 
+        <%= f.label :labelled, 'Music'%>
+        <%= f.radio_button :type, 'Movies' %>
+        <%= f.label :labelled, 'Movies'%>
+        <%= f.radio_button :type, 'Theatre' %>
+        <%= f.label :labelled, 'Theatre' %>
+        <%= f.radio_button :type, 'Art' %>
+        <%= f.label :labelled, 'Art' %>
     </div>
-    
+
+        
+<h1><%= link_to 'Back', ideas_path %></h1>
 <%end%>

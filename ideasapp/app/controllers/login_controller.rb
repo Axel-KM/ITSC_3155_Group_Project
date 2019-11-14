@@ -5,4 +5,5 @@ class LoginController < ApplicationController
   def create
       render plain: params[:idea].inspect
   end
+  
 end
