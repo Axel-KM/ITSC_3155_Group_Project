@@ -262,3 +262,51 @@ Processing by LoginController#index as HTML
 Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 152.15.112.68 at 2019-11-14 17:22:26 +0000
+Cannot render console from 152.15.112.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.112.68 at 2019-11-14 17:22:27 +0000
+Cannot render console from 152.15.112.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/index" for 152.15.112.68 at 2019-11-14 17:22:33 +0000
+Cannot render console from 152.15.112.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 197ms (Views: 196.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.112.68 at 2019-11-14 17:32:54 +0000
+Cannot render console from 152.15.112.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 204ms (Views: 196.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/index" for 152.15.112.68 at 2019-11-14 17:33:01 +0000
+Cannot render console from 152.15.112.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.112.68 at 2019-11-14 17:33:09 +0000
+Cannot render console from 152.15.112.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
