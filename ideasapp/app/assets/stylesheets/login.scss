@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-*{
+body{
     margin: 0;
     padding: 0;
     background:url("back.jpg") no-repeat center fixed;
@@ -155,7 +155,7 @@ input[type=text]:focus, input[type=password]:focus {
   border-color: #b4ccce #b3c0c8 #9eb9c2;
   border-radius: 16px;
   text-align: center;
-  width: 280px;
+  width: 310px;
 }
 
 .submit a{
