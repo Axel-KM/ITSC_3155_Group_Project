@@ -8,6 +8,37 @@
     <%=@idea.text%>
 </p>
 
+<h2>Comments</h2>
+<% @idea.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@idea, @idea.comments.build]) do |idea| %>
+  <p>
+    <%= idea.label :commenter %><br>
+    <%= idea.text_field :commenter %>
+  </p>
+  <p>
+    <%= idea.label :body %><br>
+    <%= idea.text_area :body %>
+  </p>
+  <p>
+    <%= idea.submit %>
+  </p>
+<% end %>  
+
+<%= link_to 'Ideas List', ideas_path %>
+
+
 <p>
     <strong>Type:</strong>
     <%=@idea.type%>

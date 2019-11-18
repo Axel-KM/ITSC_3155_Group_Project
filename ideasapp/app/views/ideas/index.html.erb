@@ -22,27 +22,27 @@
 
 
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
+<!--<table>-->
+<!--  <tr>-->
+<!--    <th>Title</th>-->
+<!--    <th>Text</th>-->
+<!--  </tr>-->
  
-  <% @idea.each do |id| %>
-    <tr>
-      <td><%= id.title %></td>
-      <td><%= id.text %></td>
-      <td><%= id.type %></td>
-      <td><%= id.labelled %></td>
-      <td><%= id.up_rank %></td>
-      <td><%= id.down_rank %></td>
-      <td><%= id.total_rank %></td>
-      <td><%= id.created_at %></td>
-      <td><%= link_to 'Show', ideas_path(id) %></td>
-    </tr>
-  <% end %>
+<!--  <% @idea.each do |id| %>-->
+<!--    <tr>-->
+<!--      <td><%= id.title %></td>-->
+<!--      <td><%= id.text %></td>-->
+<!--      <td><%= id.type %></td>-->
+<!--      <td><%= id.labelled %></td>-->
+<!--      <td><%= id.up_rank %></td>-->
+<!--      <td><%= id.down_rank %></td>-->
+<!--      <td><%= id.total_rank %></td>-->
+<!--      <td><%= id.created_at %></td>-->
+<!--      <td><%= link_to 'Show', ideas_path(id) %></td>-->
+<!--    </tr>-->
+<!--  <% end %>-->
   
-<h1><%= link_to 'Back', ideas_path %></h1>
+
 </table>
 
 <div class = "container">
@@ -54,7 +54,7 @@
             <h3><%= id.title %></h3>
             <p><%= id.text %></p>
             <p><%= id.created_at %></p>
-            <p><%= link_to 'Show', ideas_path(id) %> 
+            <p><%= link_to 'Show', idea_path(id) %> 
             <%= link_to 'Edit', edit_idea_path(id) %>
             <%= link_to 'Destroy',
                                         ideas_path(id),
@@ -65,5 +65,7 @@
     </div>
     <% end %>
 </div>
+
+<h1><%= link_to 'Back', ideas_path %></h1>
 
 

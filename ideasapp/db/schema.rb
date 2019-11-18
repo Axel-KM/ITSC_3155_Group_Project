@@ -10,16 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_14_201216) do
+ActiveRecord::Schema.define(version: 2019_11_18_215830) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string "commenter"
+    t.text "body"
+    t.integer "idea_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["idea_id"], name: "index_comments_on_idea_id"
+  end
 
   create_table "ideas", force: :cascade do |t|
     t.text "text"
     t.string "title"
     t.string "type"
     t.string "labelled"
-    t.integer "up_rank", :default => 0 
-    t.integer "down_rank", :default => 0 
-    t.integer "total_rank", :default => 0
+    t.integer "up_rank"
+    t.integer "down_rank"
+    t.integer "total_rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
