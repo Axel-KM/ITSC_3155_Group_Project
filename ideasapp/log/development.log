@@ -7321,3 +7321,23 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 24.225.36.144 at 2019-11-18 20:35:29 +0000
+Cannot render console from 24.225.36.144! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 390ms (Views: 382.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 24.225.36.144 at 2019-11-18 20:35:31 +0000
+Cannot render console from 24.225.36.144! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:31
+  Rendered ideas/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 0.9ms)
+
+
