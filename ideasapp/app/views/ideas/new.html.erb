@@ -16,17 +16,17 @@
     </p>
     
     <div>
-       
-        <%= f.radio_button :type, 'Music' %> 
-        <%= f.label :labelled, 'Music'%>
-        <%= f.radio_button :type, 'Movies' %>
-        <%= f.label :labelled, 'Movies'%>
-        <%= f.radio_button :type, 'Theatre' %>
-        <%= f.label :labelled, 'Theatre' %>
-        <%= f.radio_button :type, 'Art' %>
-        <%= f.label :labelled, 'Art' %>
+                                 
+        <%= f.select(:labelled, ["Music",
+                             "Movies",
+                             "Theatre",
+                             "Art"],{ :prompt => "Category"},
+                                   { :multiple => true, :size => 5 }
+                                 ) %>
+        
     </div>
 
+    
         
 <h1><%= link_to 'Back', ideas_path %></h1>
 <%end%>
