@@ -22,7 +22,7 @@ class IdeasController < ApplicationController
         @idea = Idea.find(params[:id])
     end
     
-    def updated
+    def update
         
         @idea = Idea.find(params[:id])
         
