@@ -8081,3 +8081,184 @@ Processing by IdeasController#index as HTML
 Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 152.15.113.4 at 2019-11-19 01:08:12 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 289ms (Views: 281.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-11-19 01:08:12 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 152.15.113.4 at 2019-11-19 01:08:15 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:31
+  Rendered ideas/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 52ms (Views: 42.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/5" for 152.15.113.4 at 2019-11-19 01:08:17 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:18
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 5]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (69.7ms)
+Completed 200 OK in 96ms (Views: 90.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas" for 152.15.113.4 at 2019-11-19 01:08:27 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:31
+  Rendered ideas/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/5" for 152.15.113.4 at 2019-11-19 01:10:20 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:18
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 5]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/new" for 152.15.113.4 at 2019-11-19 01:10:26 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas/5" for 152.15.113.4 at 2019-11-19 01:10:37 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:18
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 5]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 152.15.113.4 at 2019-11-19 01:11:04 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:31
+  Rendered ideas/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/new" for 152.15.113.4 at 2019-11-19 01:11:05 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas/new" for 152.15.113.4 at 2019-11-19 01:11:08 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas/5" for 152.15.113.4 at 2019-11-19 01:11:44 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:18
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 5]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/new" for 152.15.113.4 at 2019-11-19 01:11:52 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-11-19 01:46:03 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 211ms (Views: 197.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 152.15.113.4 at 2019-11-19 01:46:04 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 152.15.113.4 at 2019-11-19 01:46:06 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:31
+  Rendered ideas/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 36ms (Views: 30.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/5" for 152.15.113.4 at 2019-11-19 01:46:08 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:18
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 5]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 44ms (Views: 35.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/new" for 152.15.113.4 at 2019-11-19 01:46:12 +0000
+Cannot render console from 152.15.113.4! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
