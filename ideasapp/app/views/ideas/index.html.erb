@@ -1,3 +1,4 @@
+<body class = "index-body">
 <h1 class = title>Welcome to blog post</h1>
 
 <!--beginning of navigation bar-->
@@ -22,11 +23,6 @@
 
 <p class = "description">Select one of the blocks below to with some questions</p>
 
-<!--<table>-->
-<!--  <tr>-->
-<!--    <th>Title</th>-->
-<!--    <th>Text</th>-->
-<!--  </tr>-->
  
 <!--  <% @idea.each do |id| %>-->
 <!--    <tr>-->
@@ -43,14 +39,12 @@
 <!--  <% end %>-->
   
 
-<!--</table>-->
 
 <div class = "container">
     <% @idea.each do |id| %>
     <div class = "box">
-        <div class = "icon"><i class="fa fa-question"></i></div>
         <div class = "content">
-            
+            <h2>0<%= id.id %></h2>
             <h3><%= id.title %></h3>
             <p><%= id.text %></p>
             <p><%= id.created_at %></p>
@@ -66,6 +60,8 @@
     <% end %>
 </div>
 
+
 <h1><%= link_to 'Back', ideas_path %></h1>
+</body>
 
 

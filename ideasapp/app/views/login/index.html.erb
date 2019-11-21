@@ -1,16 +1,22 @@
+<body class = "login-body">
 <div class="login-container">
-  <div class="login">
-    <h1>Login to App</h1>
-    <form>
-      <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-      <p><input type="password" name="password" value="" placeholder="Password"></p>
-      
-      <button class="submit"><%= link_to 'Login', controller: 'ideas' %></button>
-      <button class ="submit"><%= link_to 'Enter as Guest', controller: 'ideas' %></button>
-    </form>
-  </div>
- 
-  <div class="login-help">
-    <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
-  </div>
+    <div class="form">
+       <h2>Login Form</h2>
+        <form>
+            <div class="inputBox">
+            <input type="text" name="" placeholder="Username">
+            </div>
+          <div class="inputBox">
+            <input type="password" name="" placeholder="password">
+          </div>
+          <div class="inputBox">
+            <button class="login-submit"><%= link_to 'Login', controller: 'ideas' %></button>
+            <button class ="login-submit"><%= link_to 'Guest', controller: 'ideas' %></button>
+            <button class ="login-submit"><%= link_to 'Register', controller: 'ideas' %></button>
+          </div>
+          <br>
+          <p>Forget Password ? <a href = "#">Click Here </a></p>
+        </form>
+    </div>
 </div>
+</body>
