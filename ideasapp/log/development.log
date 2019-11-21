@@ -13382,3 +13382,818 @@ Processing by IdeasController#index as HTML
 Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 18:59:18 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 400ms (Views: 389.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/new" for 152.15.113.5 at 2019-11-21 18:59:32 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ideas" for 152.15.113.5 at 2019-11-21 18:59:39 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dcMi6RraptW3f1S4BvzVbAX9Y++9lGaHAsVJ8CQONh6GOlnqZJ+NbQFvqRSV/ukr4rvrPLJC+7dk6MTn8m2XIw==", "idea"=>{"title"=>"fkajsdkfjasdkf", "text"=>"jalksdfklajsldflkasjflkasflkasjkfasjlkfs", "labelled"=>"Movies"}, "commit"=>"Post Idea"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:15
+  [1m[36mIdea Create (0.3ms)[0m  [1m[32mINSERT INTO "ideas" ("text", "title", "labelled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["text", "jalksdfklajsldflkasjflkasflkasjkfasjlkfs"], ["title", "fkajsdkfjasdkf"], ["labelled", "Movies"], ["created_at", "2019-11-21 18:59:39.254459"], ["updated_at", "2019-11-21 18:59:39.254459"]]
+  ↳ app/controllers/ideas_controller.rb:15
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:15
+Redirected to https://fb57eead905a4efeb6ab5510e3de8f36.vfs.cloud9.us-east-2.amazonaws.com/ideas/9
+Completed 302 Found in 13ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/ideas/9" for 152.15.113.5 at 2019-11-21 18:59:39 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 9]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 18:59:40 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/9" for 152.15.113.5 at 2019-11-21 18:59:47 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 9]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/9" for 152.15.113.5 at 2019-11-21 18:59:50 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9oQ1iaoD4jMgQ7ZvzB/JQRXfYbRFxK30atsAxdyYj2FgryDnxQ7ZjV3nR06FNX3jtVBu79psbahU6GN+4I+dtQ==", "id"=>"9"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:43
+  [1m[36mIdea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/ideas_controller.rb:43
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:43
+Redirected to https://fb57eead905a4efeb6ab5510e3de8f36.vfs.cloud9.us-east-2.amazonaws.com/ideas
+Completed 302 Found in 10ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 18:59:50 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/4" for 152.15.113.5 at 2019-11-21 19:00:01 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 19:00:03 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 152.15.113.5 at 2019-11-21 22:30:00 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 281ms (Views: 273.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:30:27 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 40ms (Views: 32.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ideas/new" for 152.15.113.5 at 2019-11-21 22:30:43 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ideas" for 152.15.113.5 at 2019-11-21 22:30:52 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rnhugV95couDDPwlkdPtRj9qg93uh2HMIkii09ZiAUhdgRWCITxZMzUcAYkC0dEB2CwLDuFR/PxEZS/EAAGgdQ==", "idea"=>{"title"=>"this is article 1 ", "text"=>"dsafasdfasfdsaf", "labelled"=>"Music"}, "commit"=>"Post Idea"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:15
+  [1m[36mIdea Create (0.3ms)[0m  [1m[32mINSERT INTO "ideas" ("text", "title", "labelled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["text", "dsafasdfasfdsaf"], ["title", "this is article 1 "], ["labelled", "Music"], ["created_at", "2019-11-21 22:30:53.002625"], ["updated_at", "2019-11-21 22:30:53.002625"]]
+  ↳ app/controllers/ideas_controller.rb:15
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:15
+Redirected to https://fb57eead905a4efeb6ab5510e3de8f36.vfs.cloud9.us-east-2.amazonaws.com/ideas/9
+Completed 302 Found in 11ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/ideas/9" for 152.15.113.5 at 2019-11-21 22:30:53 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 9]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 50ms (Views: 45.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:30:54 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/new" for 152.15.113.5 at 2019-11-21 22:31:12 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:32:37 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:36:04 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  Rendered ideas/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/NewProject/ideasapp/app/views/ideas/index.html.erb:45: syntax error, unexpected ')'
+...nd=( link_to (idea_path(id) do));@output_buffer.safe_append='
+...                              ^
+/home/ec2-user/environment/NewProject/ideasapp/app/views/ideas/index.html.erb:57: syntax error, unexpected end, expecting ')'
+     end 
+     ^~~
+/home/ec2-user/environment/NewProject/ideasapp/app/views/ideas/index.html.erb:67: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/NewProject/ideasapp/app/views/ideas/index.html.erb:69: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/ideas/index.html.erb:45: syntax error, unexpected ')'
+app/views/ideas/index.html.erb:57: syntax error, unexpected end, expecting ')'
+app/views/ideas/index.html.erb:67: syntax error, unexpected ensure, expecting ')'
+app/views/ideas/index.html.erb:69: syntax error, unexpected end, expecting ')'
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:36:29 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/3" for 152.15.113.5 at 2019-11-21 22:36:31 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 44ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:36:48 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/5" for 152.15.113.5 at 2019-11-21 22:37:05 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 5]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:37:35 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/4" for 152.15.113.5 at 2019-11-21 22:37:37 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/new" for 152.15.113.5 at 2019-11-21 22:39:39 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ideas" for 152.15.113.5 at 2019-11-21 22:39:47 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1qkXJb8Z7S92CRNhDjyv8/64jRftxPvEd9sf7hXZurwlUGwmwVzGl8AZ7s2dPpO0Gf4FxOISZvQR9pL5w7obgQ==", "idea"=>{"title"=>"dfajsfjalksjdf;", "text"=>"akjsdkfjasdf", "labelled"=>"Music"}, "commit"=>"Post Idea"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:15
+  [1m[36mIdea Create (0.9ms)[0m  [1m[32mINSERT INTO "ideas" ("text", "title", "labelled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["text", "akjsdkfjasdf"], ["title", "dfajsfjalksjdf;"], ["labelled", "Music"], ["created_at", "2019-11-21 22:39:47.945803"], ["updated_at", "2019-11-21 22:39:47.945803"]]
+  ↳ app/controllers/ideas_controller.rb:15
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:15
+Redirected to https://fb57eead905a4efeb6ab5510e3de8f36.vfs.cloud9.us-east-2.amazonaws.com/ideas/10
+Completed 302 Found in 9ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/ideas/10" for 152.15.113.5 at 2019-11-21 22:39:47 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 10]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:39:49 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:41:25 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 156ms (Views: 155.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:41:27 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:43:13 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 103ms (Views: 102.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:43:44 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:44:05 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 106ms (Views: 104.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:45:50 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:27
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 122ms (Views: 120.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:50:47 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.7ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:49
+  Rendered ideas/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:52:02 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:49
+  Rendered ideas/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (3 for 4) for `rgba'):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/ideas.scss:148
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1576435956732186572_70138236124980'
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:52:41 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:49
+  Rendered ideas/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 112ms (Views: 111.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:53:00 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:49
+  Rendered ideas/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 152.15.113.5 at 2019-11-21 22:55:22 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 285ms (Views: 277.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:55:26 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 36ms (Views: 31.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:56:34 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 129ms (Views: 128.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:57:27 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 157ms (Views: 155.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:58:24 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 149ms (Views: 147.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:58:40 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:58:52 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 130ms (Views: 128.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 22:59:07 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 108ms (Views: 107.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:00:30 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:00:31 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:01:19 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 109ms (Views: 107.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:01:20 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:01:48 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 120ms (Views: 119.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/4" for 152.15.113.5 at 2019-11-21 23:01:59 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:12
+  Rendered ideas/show.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 48ms (Views: 37.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:02:43 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:03:08 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:03:25 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 152.15.113.5 at 2019-11-21 23:04:06 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:04:35 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "     user-select": expected ";", was ": none;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/ideas.scss:279
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3787934484448924606_69928852672640'
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:04:48 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (1.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 126ms (Views: 123.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:06:06 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 108ms (Views: 106.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:06:33 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 125ms (Views: 124.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:07:05 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 110ms (Views: 109.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:07:15 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:09:45 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 108ms (Views: 106.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:11:52 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 119ms (Views: 117.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:11:53 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:12:09 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 108ms (Views: 106.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:12:15 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 128ms (Views: 127.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:12:23 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 107ms (Views: 106.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:12:24 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:12:30 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 123ms (Views: 122.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:14:37 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:48
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 106ms (Views: 105.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 152.15.113.5 at 2019-11-21 23:17:25 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:46
+  Rendered ideas/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/new" for 152.15.113.5 at 2019-11-21 23:17:33 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+

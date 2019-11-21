@@ -1,24 +1,43 @@
 <body class = "index-body">
-<h1 class = title>Welcome to blog post</h1>
+<!--<h1 class = title>Welcome to blog post</h1>-->
 
 <!--beginning of navigation bar-->
-<div class="navbar">
-  <a href="#home">Home</a>
-  <%= link_to 'New Idea', new_idea_path %>
-  <div class="dropdown">
-    <button class="dropbtn">Categories 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Music</a>
-      <a href="#">Movies</a>
-      <a href="#">Theatre</a>
-      <a href="#">Art</a>
-    </div>
-  </div> 
-</div>
-<!--end of navigation bar-->
+<!--<div class="navbar">-->
+<!--  <a href="#home">Home</a>-->
+<!--  <%= link_to 'New Idea', new_idea_path %>-->
+<!--  <div class="dropdown">-->
+<!--    <button class="dropbtn">Categories -->
+<!--      <i class="fa fa-caret-down"></i>-->
+<!--    </button>-->
+<!--    <div class="dropdown-content">-->
+<!--      <a href="#">Music</a>-->
+<!--      <a href="#">Movies</a>-->
+<!--      <a href="#">Theatre</a>-->
+<!--      <a href="#">Art</a>-->
+<!--    </div>-->
+<!--  </div> -->
+<!--</div>-->
 
+<div class = "menu">
+   <a href = "#" class="brand">asdfsa</a>
+   <nav>
+      <ul>
+         <li><a href = "#">Home </a></li>
+         <li><%= link_to 'New Idea', new_idea_path %></li>
+         <li>
+            <a href = "#">Categories</a>
+            <ul>
+               <li><a href = "#">Music</a></li>
+               <li><a href = "#">Movies</a></li>
+               <li><a href = "#">Theatre</a></li>
+               <li><a href = "#">Art</a></li>
+            </ul>
+         </li>
+      </ul>
+   </nav>
+</div>       
+<!--end of navigation bar-->
+<section>
 <h1 class="listing">Listing All Ideas</h1>
 
 <p class = "description">Select one of the blocks below to with some questions</p>
@@ -42,21 +61,25 @@
 
 <div class = "container">
     <% @idea.each do |id| %>
+    <!--<%= link_to idea_path(id) do%>-->
     <div class = "box">
         <div class = "content">
             <h2>0<%= id.id %></h2>
             <h3><%= id.title %></h3>
-            <p><%= id.labelled %></p>
+            <p id = "labelcategories"><%= id.labelled %></p>
             <p><%= id.text %></p>
             <p><%= id.created_at %></p>
             <p><%= link_to 'Show', idea_path(id) %></p>
         </div>
     </div>
+    <!--<% end %>-->
     <% end %>
 </div>
-
-
+  <br>
 <h1><%= link_to 'Back', ideas_path %></h1>
+</section>
+
+
 </body>
 
 
