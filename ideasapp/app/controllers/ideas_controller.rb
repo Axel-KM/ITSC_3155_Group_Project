@@ -23,11 +23,15 @@ class IdeasController < ApplicationController
         @idea = Idea.find(params[:id]) 
     end
     
+    def edit
+        @idea = Idea.find(params[:id])
+    end
+    
     def update
         
         @idea = Idea.find(params[:id])
         
-        if @idea.update(article_params)
+        if @idea.update(ideas_params)
             redirect_to @idea
         else
             render 'edit'
