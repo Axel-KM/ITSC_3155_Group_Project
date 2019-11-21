@@ -46,15 +46,10 @@
         <div class = "content">
             <h2>0<%= id.id %></h2>
             <h3><%= id.title %></h3>
+            <p><%= id.labelled %></p>
             <p><%= id.text %></p>
             <p><%= id.created_at %></p>
-            <p><%= link_to 'Show', idea_path(id) %> 
-            <%= link_to 'Edit', edit_idea_path(id) %>
-            <%= link_to 'Destroy',
-                                        idea_path(id),
-                                        method: :delete,
-                                        data: { confirm: 'Are you sure?' } %></p>
-        
+            <p><%= link_to 'Show', idea_path(id) %></p>
         </div>
     </div>
     <% end %>

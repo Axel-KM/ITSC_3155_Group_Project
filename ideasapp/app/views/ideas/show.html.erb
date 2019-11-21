@@ -34,7 +34,14 @@
   <p>
     <%= idea.submit %>
   </p>
-<% end %>  
+<% end %> 
+
+
+<%= link_to 'Edit', edit_idea_path(@idea) %>
+            <%= link_to 'Destroy',
+                                        idea_path(@idea),
+                                        method: :delete,
+                                        data: { confirm: 'Are you sure?' } %>
 
 <%= link_to 'Ideas List', ideas_path %>
 
