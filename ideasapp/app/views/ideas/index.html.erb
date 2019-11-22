@@ -1,28 +1,18 @@
 <body class = "index-body">
-<!--<h1 class = title>Welcome to blog post</h1>-->
-
-<!--beginning of navigation bar-->
-<!--<div class="navbar">-->
-<!--  <a href="#home">Home</a>-->
-<!--  <%= link_to 'New Idea', new_idea_path %>-->
-<!--  <div class="dropdown">-->
-<!--    <button class="dropbtn">Categories -->
-<!--      <i class="fa fa-caret-down"></i>-->
-<!--    </button>-->
-<!--    <div class="dropdown-content">-->
-<!--      <a href="#">Music</a>-->
-<!--      <a href="#">Movies</a>-->
-<!--      <a href="#">Theatre</a>-->
-<!--      <a href="#">Art</a>-->
-<!--    </div>-->
-<!--  </div> -->
-<!--</div>-->
 
 <div class = "menu">
-   <a href = "#" class="brand">asdfsa</a>
+   <a href = "#" class="brand">
+       <div class = "loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> 
+        </div>
+        <p id = "loaderp">NUI</p>
+    </a>
    <nav>
       <ul>
-         <li><a href = "#">Home </a></li>
+         <li><%= link_to 'Home', ideas_path %></li>
          <li><%= link_to 'New Idea', new_idea_path %></li>
          <li>
             <a href = "#">Categories</a>
@@ -37,7 +27,10 @@
    </nav>
 </div>       
 <!--end of navigation bar-->
+
+
 <section>
+    
 <h1 class="listing">Listing All Ideas</h1>
 
 <p class = "description">Select one of the blocks below to with some questions</p>
@@ -66,8 +59,8 @@
         <div class = "content">
             <h2>0<%= id.id %></h2>
             <h3><%= id.title %></h3>
-            <p id = "labelcategories"><%= id.labelled %></p>
-            <p><%= id.text %></p>
+            <p id = "containercategories"><%= id.labelled %></p>
+            <p id = "containertext"><%= id.text %></p>
             <p><%= id.created_at %></p>
             <p><%= link_to 'Show', idea_path(id) %></p>
         </div>

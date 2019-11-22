@@ -1,3 +1,31 @@
+<div class = "menu">
+   <a href = "#" class="brand">
+       <div class = "loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> 
+        </div>
+        <p id = "loaderp">NUI</p>
+    </a>
+   <nav>
+      <ul>
+         <li><%= link_to 'Home', ideas_path %></li>
+         <li><%= link_to 'New Idea', new_idea_path %></li>
+         <li>
+            <a href = "#">Categories</a>
+            <ul>
+               <li><a href = "#">Music</a></li>
+               <li><a href = "#">Movies</a></li>
+               <li><a href = "#">Theatre</a></li>
+               <li><a href = "#">Art</a></li>
+            </ul>
+         </li>
+      </ul>
+   </nav>
+</div>  
+
+<section>
 <h1>Editing Ideas</h1>
  
 <%= form_for :idea, url: idea_path(@idea), method: :patch do |f| %>
@@ -33,3 +61,5 @@
 <% end %>
  
 <%= link_to 'Back', ideas_path %>
+
+</section>
