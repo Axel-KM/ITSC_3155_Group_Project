@@ -25,41 +25,42 @@
    </nav>
 </div>       
 
-<section>
-<h1>New Idea</h1>
+<section class = "newsection">
+<body class = "new-body">    
+<h1 class = "newtitle">New Idea</h1>
 
 <%= form_for :idea, url: ideas_path do |f| %>
-    <p>
-        <%= f.label :title %>
+    <div class = "newform">
+        
+       <p class = "newlabel"><%= f.label :title %></p>
         <br>
-        <%= f.text_field :title, size: "60x12" %>
-    </p>
-    <p>
-        <%= f.label :text %>
-        <br>
-        <%= f.text_area :text, size: "60x12" %>
-    </p>
+       <p class = "newtitlebox"><%= f.text_field :title, size: "60x12", placeholder: "input title" %></p>
     
-    <div>
-                                 
-        <%= f.label :labelled %>
+    
+        <p class = "newlabel"><%= f.label :text %></p>
         <br>
-        <%= f.select(:labelled, [["Music"],
+        <p class = "newtextbox"><%= f.text_area :text, size: "60x12" %></p>
+   
+    
+                                 
+        <p class = "newlabel"><%= f.label :labelled %></p>
+        <br>
+        <p class = "newcategories"><%= f.select(:labelled, [["Music"],
                              ["Movies"],
                              ["Theatre"],
                              ["Art"]],{ :prompt => "Category"},
-                                 ) %>
+                                 ) %></p>
         
-    </div>
 
-    <p>
+    
 
-        <%=:rank_up%>
-        <%=:rank_down%>
-        <%=:total_rank%>
+        <p class = "rankup"><%=:rank_up%></p>
+        <p class = "rankdown"><%=:rank_down%></p>
+        <p class = "totalrank"><%=:total_rank%></p>
         
         <%= f.submit "Post Idea"%>
     </p>
+    </div>
         
 <h1><%= link_to 'Back', ideas_path %></h1>
 <%end%>

@@ -53,8 +53,6 @@
 }
 
 
-
-
 //container box for content css
 
 .container{
@@ -259,8 +257,6 @@
 }
 
 
-
-
 //navigation bar
 
 .menu{
@@ -271,7 +267,7 @@
     padding: 0 100px;
     top: 0;
     box-sizing: border-box;
-    border-bottom: 1px solid rgba(0,0,0,.2);
+    border-bottom: 1px solid rgba(3,12,33,.2);
 }
 
 nav{
@@ -335,9 +331,20 @@ nav ul li ul li a{
     padding: 10px;
 }
 
-section{
+.indexsection{
     position: relative;
-    top: 89px;
+    top: 89.5px;
+    width: 100%;
+    height: 100vh;
+    background: #060c21;
+    background-size: cover;
+    z-index: 0;
+    opacity: .99;
+}
+
+.newsection{
+    position: relative;
+    top: 99.5px;
     width: 100%;
     height: 100vh;
     background: #060c21;
@@ -347,66 +354,127 @@ section{
 }
 
 
-
 //new-form page
 
 .new-body{
-//     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-// 	background-size: 400% 400%;
-// 	animation: gradientBG 15s ease infinite;
-    background: #000;
+     margin: 0;
+     background: #060c21;
+     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-// .new-title{
-//     text-align: center;
-//     font-size: 43px;
-//     font-family: "Brush Script MT";
-//      background: -webkit-linear-gradient(#eee, #333);
-//       -webkit-background-clip: text;
-//       -webkit-text-fill-color: transparent;
+.newform{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+    // border: 1px solid #fff;
+}
+
+// .newform:after{
+//     content: '';
+//     position: absolute;
+//     top: -5px;
+//     left: -5px;
+//     right: -5px;
+//     bottom: -5px;
+//     background: linear-gradient(45deg,#ff0047,#6eff00);
+//     pointer-events: none;
+//     animation: animate 10s linear infinite;
 // }
 
-// .new_title_field{
-//     text-align: center;
-//     font-size: 20px;
-//     text-decoration: underline;
-//     font-weight: 900;
-//      background: -webkit-linear-gradient(#eee, #333);
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-// }
-
-// .new_text_field{
-//     text-align: center;
-//     font-size: 20px;
-//     text-decoration: underline;
-//     font-weight: 900;
-//      background: -webkit-linear-gradient(#eee, #333);
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-// }
-
-// .new_titlebox > input{
- 
-//     height: 25px;
-//     margin: 0 auto;
-//     text-align: left;
-//     vertical-align: center;
-//     background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-//     animation: gradientBG 15s ease infinite;
-//     border-radius: 10px;
-// }
-
-// .new_textbox > textarea{
-//      background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-//     animation: gradientBG 15s ease infinite;
-//     border-radius: 10px;
+//the title "new idea"
+.newtitle{
+    text-align: center;
+    margin-top: 15px;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: "Impact";
+   text-decoration: underline;
+   text-decoration-color: #fff;
     
-// }
+}
 
-// .newdiv1{
-//     text-align: center;
-// }
+//title for all the text boxes 
+.newlabel{
+    text-align: center;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   margin-top: 15px;
+   font-weight: 900;
+   margin-bottom: 15px;
+   font-size: 20px;
+}
+
+//title textbox
+.newtitlebox{
+    vertical-align: center;
+    text-align: center;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    box-shadow: inset 0 0 0 3px #fff,
+			0 0 0 4px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+	border-radius: 8px;		
+}
+
+.newtitlebox input{
+    border: 1px solid #fff;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    border-radius: 6px;
+}
+
+//text textbox
+.newtextbox{
+    vertical-align: center;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    box-shadow: inset 0 0 0 3px #fff,
+			0 0 0 4px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+	border-radius: 8px;		
+	width: 426px;
+	height: 169px;
+		
+}
+
+.newtextbox textarea{
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    border-radius: 8px;
+    border: 1px solid #fff;
+    width: 426px;
+    height: 169px;
+}
+
+//Categories drop down bar
+.newcategories{
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: center;
+    padding: 0 20px;
+}
+
+.rankup, .rankdown, .totalrank{
+    text-align: center;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.newform input[type = "submit"]{
+    margin-top: 10px;
+    padding: 10px;
+    
+}
 
 
 //Footer of page
@@ -417,8 +485,6 @@ section{
   padding: 50px;
   position: relative;
 }
-
-
 
 
 

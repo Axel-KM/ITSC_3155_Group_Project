@@ -88,7 +88,8 @@
     font-size: 18px;
     color: #fff;
     padding: 5px 0;
-    font-family: consolas 
+    font-family: "consolas";
+    text-decoration: none;
     
 }
 
@@ -97,13 +98,23 @@
 }
 
 .form .inputBox .login-submit{
-    background: #fff;
+    background: #f4f1f5;
     color: #000;
     height: 25px;
     border: none;
     font-weight: 900;
+    margin-left: 10px;
+    padding: 0 20px;
     max-width: 100px;
     cursor: pointer;
+    text-decoration: none;
+}
+
+
+.form .inputBox .login-submit a{
+    color: #b165db;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .form p {
@@ -112,4 +123,5 @@
 
 .form p a {
     color : #fff;
+    text-decoration: none;
 }
