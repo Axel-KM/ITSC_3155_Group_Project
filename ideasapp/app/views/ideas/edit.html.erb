@@ -1,3 +1,7 @@
+<head>
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+
 <div class = "menu">
    <a href = "#" class="brand">
        <div class = "loader">
@@ -25,11 +29,12 @@
    </nav>
 </div>  
 
-<section>
-<h1>Editing Ideas</h1>
+<section class = "editsection">
+    <body class = "edit-body">
+<h1 class = "edittitle">Editing Ideas</h1>
  
 <%= form_for :idea, url: idea_path(@idea), method: :patch do |f| %>
- 
+ <div class = "editform">
   <% if @idea.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -44,22 +49,24 @@
     </div>
   <% end %>
  
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+  
+    <p class = "editlabel"><%= f.label :title %></p>
+    <br>
+    <p class = "edittitlebox"><%= f.text_field :title %></p>
  
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
+
+    <p class = "editlabel"><%= f.label :text %></p>
+    <br>
+    <p class = "edittextbox"><%= f.text_area :text %></p>
  
   <p>
     <%= f.submit %>
   </p>
  
+ </div>
+<%= link_to 'Back', ideas_path %>
 <% end %>
  
-<%= link_to 'Back', ideas_path %>
 
+</body>
 </section>

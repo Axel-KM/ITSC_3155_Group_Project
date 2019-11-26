@@ -14,6 +14,75 @@
     font-family: consolas;
 }
 
+
+//title
+.login-body h1{
+    position: absolute;
+    top: 10%;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size: 160px;
+    font-family: 'Tangerine', serif;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.login-body h1 span{
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: animatetitle 2s linear infinite;
+}
+
+
+.login-body h1 span:nth-child(1)
+{
+    animation-delay: 0s;
+}
+.login-body h1 span:nth-child(2)
+{
+    animation-delay: 0.25s;
+}
+.login-body h1 span:nth-child(3)
+{
+    animation-delay: 0.5s;
+}
+
+
+@keyframes animatetitle{
+    0%,100%
+    {
+        color: #fff;
+        filter:blur(2px);
+        
+        //blue light
+        text-shadow: 0 0 10px #00b3ff,
+                    0 0 20px #00b3ff,
+                    0 0 40px #00b3ff;
+        
+        //shining green
+        // text-shadow: 0 0 10px #1beabd,
+        //             0 0 20px #1beabd,
+        //             0 0 40px #1beabd;
+        
+        //redish
+        // text-shadow: 0 0 10px #ff0059,
+        //             0 0 20px #ff0059,
+        //             0 0 40px #ff0059;            
+                                
+    }
+    
+    5%,95%
+    {
+            color: #111;
+            filter: blur(0px);
+            text-shadow: 0 none;
+    }
+    
+}
+
+//login container block
 .login-container h2{
     text-align: center;
 }
@@ -21,6 +90,7 @@
 .login-container{
     position: relative;
     width: 450px;
+    top: 30%;
     min-height: 300px;
     background: rgba(255,255,255,0.05);
     box-shadow: 0 5px 15px rgba(0,0,0,1);
@@ -125,3 +195,4 @@
     color : #fff;
     text-decoration: none;
 }
+
