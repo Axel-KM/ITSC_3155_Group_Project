@@ -1,27 +1,82 @@
+<head>
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+
+<body class = "index-body">
+
+<div class = "menu">
+   <a href = "#" class="brand">
+       <div class = "loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> 
+        </div>
+        <p id = "loaderp">NUI</p>
+    </a>
+   <nav>
+      <ul>
+         <li><%= link_to 'Home', ideas_path %></li>
+         <li><%= link_to 'New Idea', new_idea_path %></li>
+         <li>
+            <a href = "#">Categories</a>
+            <ul>
+               <li><a href = "#">Music</a></li>
+               <li><a href = "#">Movies</a></li>
+               <li><a href = "#">Theatre</a></li>
+               <li><a href = "#">Art</a></li>
+            </ul>
+         </li>
+      </ul>
+   </nav>
+</div>       
+<!--end of navigation bar-->
+
+
+<section class = "indexsection">
+    
 <h1 class="listing">Listing All Ideas</h1>
 
-<h1><%= link_to 'New Idea', new_idea_path %></h1>
+<p class = "description">Select one of the blocks below to with some questions</p>
 
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
  
-  <% @idea.each do |id| %>
-    <tr>
-      <td><%= id.title %></td>
-      <td><%= id.text %></td>
-      <td><%= id.type %></td>
-      <td><%= id.labelled %></td>
-      <td><%= id.up_rank %></td>
-      <td><%= id.down_rank %></td>
-      <td><%= id.total_rank %></td>
-      <td><%= id.created_at %></td>
-      <td><%= link_to 'Show', ideas_path(id) %></td>
-    </tr>
-  <% end %>
+<!--  <% @idea.each do |id| %>-->
+<!--    <tr>-->
+<!--      <td><%= id.title %></td>-->
+<!--      <td><%= id.text %></td>-->
+<!--      <td><%= id.type %></td>-->
+<!--      <td><%= id.labelled %></td>-->
+<!--      <td><%= id.up_rank %></td>-->
+<!--      <td><%= id.down_rank %></td>-->
+<!--      <td><%= id.total_rank %></td>-->
+<!--      <td><%= id.created_at %></td>-->
+<!--      <td><%= link_to 'Show', ideas_path(id) %></td>-->
+<!--    </tr>-->
+<!--  <% end %>-->
   
+
+
+<div class = "container">
+    <% @idea.each do |id| %>
+    <!--<%= link_to idea_path(id) do%>-->
+    <div class = "box">
+        <div class = "content">
+            <h2><%= id.id %></h2>
+            <h3><%= id.title %></h3>
+            <p id = "containercategories"><%= id.labelled %></p>
+            <p id = "containertext"><%= id.text %></p>
+            <p><%= id.created_at %></p>
+            <p><%= link_to 'Show', idea_path(id) %></p>
+        </div>
+    </div>
+    <!--<% end %>-->
+    <% end %>
+</div>
+  <br>
 <h1><%= link_to 'Back', ideas_path %></h1>
-</table>
+</section>
+
+
+</body>
+
+

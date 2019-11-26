@@ -1,3 +1,761 @@
 // Place all the styles related to the Ideas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//apply to all pages
+*{
+    margin: 0;
+    padding: 0;
+}
+// ----------------------------------------------------------------------------//
+
+@font-face {
+    font-family: 'cubic';
+    
+    src: local('cubic'),
+         url('cubic.ttf');
+}
+
+@font-face {
+    font-family: 'starcruiser';
+    
+    src: local('starcruiser'),
+         url('starcruiser.otf');
+}
+
+@font-face {
+    font-family: 'coalition';
+    src: local('coalition'),
+         url('Coalition_v2.ttf');
+}
+
+@font-face {
+    font-family: 'romance';
+    src: local('romance'),
+         url('romance_fatal_serif.ttf');
+}
+
+
+
+//-----------------------------------------------------------------------------//
+//Index.html.erb css
+
+//index landing page
+
+.index-body{
+    //  margin: 0;
+    //  padding: 0;
+    //  display: flex;
+    //  justify-content: center;
+    //  align-items: center;
+    //  min-height: 100vh;
+     background: #060c21;
+}
+
+.listing{
+    text-align: center;
+    margin-top: 10px;
+    // font-family: "Brush Script MT";
+    font-family: "coalition";
+    text-decoration: underline;
+     background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+.description{
+    font-size : 20px;
+    padding: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.description{
+    font-size: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+//-----------------------------------------------------------------------------//
+
+
+//container box for content css
+
+.container{
+     
+     margin: 0;
+     margin-left: 50px;
+     position: relative;
+     width: 90%;
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+     grid-template-rows: auto;
+     grid-gap: 0 40px;
+}
+ .container .box{
+     position: relative;
+     height: 400px;
+     background: #060c21;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 1px solid #000;
+     margin-top: 10px;
+}
+ .container .box:before{
+     content: '';
+     position: absolute;
+     top: -2px;
+     bottom: -2px;
+     left: -2px;
+     right: -2px;
+     background: #fff;
+     transform: skew(2deg, 2deg);
+     z-index: -1;
+}
+ .container .box:nth-child(1n+0):before{
+     background: linear-gradient(315deg,#ff0057,#e64a19);
+}
+ .container .box:nth-child(2n+0):before{
+     background: linear-gradient(315deg,#89ff00,#00bcd4);
+}
+ .container .box:nth-child(3n+0):before{
+     background: linear-gradient(315deg,#e91e63,#5d02ff);
+}
+ .container .box:nth-child(4n+0):before{
+     background: linear-gradient(315deg,#ff0000,#ffc107);
+}
+
+ 
+ .container .box:after{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 50%;
+     height: 100%;
+     background: rgba(255,255,255,0.05);
+     pointer-events: none;
+}
+ .content{
+     position: relative;
+     padding: 20px;
+     transform: translateY(40px) 
+}
+ .content h2{
+     position: absolute;
+     top: -60px;
+     right: 20px;
+     margin: 0;
+     padding: 0;
+     font-size: 10em;
+     color: rgba(255,255,255,.05);
+     transition: 0.5s 
+}
+ .box:hover .content h2{
+     top: -140px;
+     user-select: none;
+}
+ .box .content h3{
+     margin: 0 0 10px;
+     padding: 0;
+     font-size: 24px;
+     font-weight: 500;
+     color: #fff;
+     user-select: none;
+}
+ .box .content p{
+     margin: 0;
+     padding: 0;
+     color: #fff;
+     font-size: 16px;
+     word-wrap: break-word;
+     max-height: 100px;
+     overflow: auto;
+     user-select: none;
+}
+
+ .box .content a{
+     position: relative;
+     margin: 20px 0 0;
+     padding: 10px 20px;
+     text-decoration: none;
+     border: 1px solid #fff;
+     display: inline-block;
+     color: #fff;
+     transition: 0.5s;
+     transform: translateY(-40px);
+     opacity: 0;
+     visibility: hidden;
+}
+ .box:hover .content a{
+     transform: translateY(0);
+     opacity: 1;
+     visibility: visible;
+}
+ .box .content a:hover{
+     color: #000;
+     background: #fff;
+}
+
+#containercategories{
+    color: #89ff00;
+}
+
+#containertext{
+    overflow: auto;
+}
+
+//-----------------------------------------------------------------------------//
+
+//Logo 
+
+.loader{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    //animation: animate 0.5s linear infinite;
+
+}
+
+@keyframes animate{
+    
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.loader span{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    animation: animate 1.5s linear infinite;
+}
+
+.loader span:nth-child(1){
+    filter: blur(5px);
+}
+
+.loader span:nth-child(2){
+    filter: blur(10px);
+
+}
+
+.loader span:nth-child(3){
+    filter: blur(25px);
+
+}
+
+.loader span:nth-child(4){
+    filter: blur(50px);
+}
+.loader:after{
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    background: #240229;
+    border-radius: 50%;   
+}
+
+#loaderp{
+    position: absolute;
+    top: 33px;
+    padding-left: 12px; 
+    z-index: 1;
+    font-size: 30px;
+    font-weight: bold;
+    // color: #fff;
+    font-family: 'romance', serif;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+//-----------------------------------------------------------------------------//
+
+
+//navigation bar
+
+.menu{
+    position: absolute;
+    width: 100%;
+    //background: rgba(6,12,33,.5);
+    background: #060c21;
+    padding: 0 100px;
+    top: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(3,12,33,.2);
+}
+
+nav{
+    position: relative;
+    float: right;
+    
+}
+
+.brand{
+    z-index: 4;
+    float: left;
+    width: 84px;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li
+{
+    list-style: none;
+}
+
+nav ul li a{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 33px 20px;
+    text-decoration: none;
+    color: rgba(109,234,50,.75);
+}
+
+nav ul li a:hover{
+    background: #184771;
+    color: #fff;
+
+}
+
+nav ul li ul{
+    display:block;
+    background: rgb(6,12,33); 
+    min-width: 250px;
+    position: absolute;
+    margin-top: 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+    //opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    transform: translateY(40px);
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    transform: translateY(0px);
+    z-index: 1;
+}
+
+nav ul li ul li a{
+    padding: 10px;
+}
+
+//-----------------------------------------------------------------------------//
+
+//index page section area
+.indexsection{
+    position: relative;
+    top: 89.5px;
+    width: 100%;
+    height: 100vh;
+    background: #060c21;
+    background-size: cover;
+    z-index: 0;
+    opacity: .99;
+}
+
+//-----------------------------------------------------------------------------//
+
+//new idea page section area
+.newsection{
+    position: relative;
+    top: 99.5px;
+    width: 100%;
+    height: 100vh;
+    background: #060c21;
+    background-size: cover;
+    z-index: 0;
+    opacity: .99;
+}
+
+//-----------------------------------------------------------------------------//
+
+//show idea page section area
+.showsection{
+    position: relative;
+    top: 99.5px;
+    width: 100%;
+    height: 100vh;
+    background: #060c21;
+    background-size: cover;
+    z-index: 0;
+    opacity: .99;
+}
+
+//-----------------------------------------------------------------------------//
+
+//edit idea page section area 
+.editsection{
+    position: relative;
+    top: 99.5px;
+    width: 100%;
+    height: 100vh;
+    background: #060c21;
+    background-size: cover;
+    z-index: 0;
+    opacity: .99;
+}
+
+//-----------------------------------------------------------------------------//
+
+//new-form page
+
+.new-body{
+     margin: 0;
+     background: #060c21;
+     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newform{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+    // border: 1px solid #fff;
+}
+
+//the title "new idea"
+.newtitle{
+    text-align: center;
+    margin-top: 25px;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: "Impact";
+   text-decoration: underline;
+   text-decoration-color: #fff;
+}
+
+
+//title for all the text boxes 
+.newlabel{
+    text-align: center;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   margin-top: 15px;
+   font-weight: 900;
+//   margin-bottom: 10px;
+   font-size: 20px;
+}
+
+
+//title textbox
+.newtitlebox{
+    vertical-align: center;
+    text-align: center;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    box-shadow: inset 0 0 0px #fff,
+			0 0 0px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+	border-radius: 8px;		
+}
+
+.newtitlebox input{
+    border: 1px solid #fff;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    border-radius: 6px;
+}
+
+//text textbox
+.newtextbox{
+    vertical-align: center;
+    text-align: center;
+    margin-bottom: 10px;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    box-shadow: inset 0 0 0px #fff,
+			0 0 0px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+	border-radius: 8px;		
+	width: 426px;
+	height: 169px;
+		
+}
+
+.newtextbox textarea{
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    border-radius: 8px;
+    vertical-align: center;
+    border: 1px solid #fff;
+    width: 426px;
+    height: 169px;
+    margin-bottom: 10px;
+}
+
+//Categories drop down bar
+.newcategories{
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: center;
+    padding: 0 20px;
+}
+
+.rankup, .rankdown, .totalrank{
+    text-align: center;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.newform input[type = "submit"]{
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 16px;
+    overflow: hidden;
+    transition: 0.2s;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 0px #fff,
+			0 0 0px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+    border-style: hidden
+    
+}
+
+.newform input[type = "submit"]:hover{
+    color: #255784;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    // transition-delay: 1.3s;
+}
+
+.newcategories select{
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    color: #44464b;
+    // margin-top: 70px;
+    // padding: 10px;
+    width: 100px;
+    border: none;
+    font-size: 16px;
+    box-shadow: 0 0 0px #fff,
+			0 0 0px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;    // -webkit-appearance: button;
+    outline: none;
+}
+
+.newcategories:hover:before{
+    background: linear-gradient(21deg, #10abff, #1beabd);
+}
+
+//-----------------------------------------------------------------------------//
+
+//show idea page 
+
+.show-body{
+     margin: 0;
+     background: #060c21;
+     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//-----------------------------------------------------------------------------//
+
+//edit ideas page
+
+.edit-body{
+    margin: 0;
+    background: #060c21;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editform{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+    // border: 1px solid #fff;
+}
+
+//the title "edit idea"
+.edittitle{
+    text-align: center;
+    margin-top: 25px;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: "Impact";
+   text-decoration: underline;
+   text-decoration-color: #fff;
+}
+
+//title for all the text boxes 
+.editlabel{
+    text-align: center;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   margin-top: 15px;
+   font-weight: 900;
+//   margin-bottom: 10px;
+   font-size: 20px;
+}
+
+
+//title textbox
+.edittitlebox{
+    vertical-align: center;
+    text-align: center;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    box-shadow: inset 0 0 0px #fff,
+			0 0 0px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+	border-radius: 8px;		
+}
+
+.edittitlebox input{
+    border: 1px solid #fff;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    border-radius: 6px;
+}
+
+//text textbox
+.edittextbox{
+    vertical-align: center;
+    text-align: center;
+    margin-bottom: 10px;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    box-shadow: inset 0 0 0px #fff,
+			0 0 0px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+	border-radius: 8px;		
+	width: 426px;
+	height: 169px;
+		
+}
+
+.edittextbox textarea{
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    border-radius: 8px;
+    vertical-align: center;
+    border: 1px solid #fff;
+    width: 426px;
+    height: 169px;
+    margin-bottom: 10px;
+}
+
+.editform input[type = "submit"]{
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 16px;
+    overflow: hidden;
+    transition: 0.2s;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 0px #fff,
+			0 0 0px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+    border-style: hidden
+    
+}
+
+.editform input[type = "submit"]:hover{
+    color: #255784;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    // transition-delay: 1.3s;
+}
+
+
+//-----------------------------------------------------------------------------//
+
+
+//Footer of page
+
+.copyright{
+  width:100%;
+  text-align: center;
+  padding: 50px;
+  position: relative;
+}
+
+//-----------------------------------------------------------------------------//
+
+//page scaling / animation keyframes
+
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  * .content{
+    width: 80%;
+    padding: 0;
+  }
+  *{
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  *{
+    width: 100%;
+  }
+}
+
+
+
+

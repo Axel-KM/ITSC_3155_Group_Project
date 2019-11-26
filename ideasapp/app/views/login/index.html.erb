@@ -1,5 +1,34 @@
-<div>
-    <h1><%= link_to 'Login', controller: 'ideas' %></h1>
-    <p>or</p>
-    <h1><%= link_to 'Enter as Guest', controller: 'ideas' %></h1>
+<head>
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+
+<body class = "login-body">
+    
+    <h1>    
+        <span>N</span>
+        <span>U</span>
+        <span>I</span>
+    </h1>
+    
+    
+<div class="login-container">
+    <div class="form">
+       <h2>Login Form</h2>
+        <form>
+            <div class="inputBox">
+            <input type="text" name="" placeholder="Username">
+            </div>
+          <div class="inputBox">
+            <input type="password" name="" placeholder="password">
+          </div>
+          <div class="inputBox">
+            <button class="login-submit"><%= link_to 'Login', controller: 'ideas' %></button>
+            <button class ="login-submit"><%= link_to 'Guest', controller: 'ideas' %></button>
+            <button class ="login-submit"><%= link_to 'Register', controller: 'ideas' %></button>
+          </div>
+          <br>
+          <p>Forget Password ? <a href = "#">Click Here </a></p>
+        </form>
+    </div>
 </div>
+</body>

@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20191120033908_change_default_on_ranks.rb
