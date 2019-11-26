@@ -7,6 +7,35 @@
     margin: 0;
     padding: 0;
 }
+// ----------------------------------------------------------------------------//
+
+@font-face {
+    font-family: 'cubic';
+    
+    src: local('cubic'),
+         url('cubic.ttf');
+}
+
+@font-face {
+    font-family: 'starcruiser';
+    
+    src: local('starcruiser'),
+         url('starcruiser.otf');
+}
+
+@font-face {
+    font-family: 'coalition';
+    src: local('coalition'),
+         url('Coalition_v2.ttf');
+}
+
+@font-face {
+    font-family: 'romance';
+    src: local('romance'),
+         url('romance_fatal_serif.ttf');
+}
+
+
 
 //-----------------------------------------------------------------------------//
 //Index.html.erb css
@@ -27,7 +56,7 @@
     text-align: center;
     margin-top: 10px;
     // font-family: "Brush Script MT";
-    font-family: "Impact";
+    font-family: "coalition";
     text-decoration: underline;
      background: -webkit-linear-gradient(#89ff00,#00bcd4);
    -webkit-background-clip: text;
@@ -233,7 +262,6 @@
 .loader span:nth-child(4){
     filter: blur(50px);
 }
-
 .loader:after{
     content: '';
     position: absolute;
@@ -253,7 +281,7 @@
     font-size: 30px;
     font-weight: bold;
     // color: #fff;
-    font-family: 'Tangerine' , serif;
+    font-family: 'romance', serif;
     background: -webkit-linear-gradient(#89ff00,#00bcd4);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
