@@ -302,20 +302,21 @@
     position: relative;
     display: inline-block;
     padding: 15px 30px;
-    color: #367909;
+    color: #05cefb;
     text-transform: uppercase;
     letter-spacing: 4px;
     text-decoration: none;
     font-size: 16px;
     overflow: hidden;
     transition: 0.2s;
+    
 }
 
 
 .buttons a:hover{
     color: #255784;
-    background: #367909;
-    box-shadow: 0 0 10px #367909, 0 0 40px #367909, 0 0 80px #2196f3;
+    background: #05cefb;
+    box-shadow: 0 0 10px #05cefb, 0 0 40px #05cefb, 0 0 80px #2196f3;
     transition-delay: 1.3s;
     
 }
@@ -330,7 +331,7 @@
     left: -100%;
     width: 100px;
     height: 2px;
-    background: linear-gradient(90deg,transparent,#367909);
+    background: linear-gradient(90deg,transparent,#05cefb);
     
 }
 
@@ -345,7 +346,7 @@
     right: -100%;
     width: 100px;
     height: 2px;
-    background: linear-gradient(270deg,transparent,#367909);
+    background: linear-gradient(270deg,transparent,#05cefb);
     
 }
 
@@ -360,7 +361,7 @@
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg,transparent,#367909);
+    background: linear-gradient(180deg,transparent,#05cefb);
     
 }
 
@@ -375,7 +376,7 @@
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg,transparent,#367909);
+    background: linear-gradient(360deg,transparent,#05cefb);
     
 }
 
@@ -427,7 +428,8 @@ nav ul li
 nav ul li a{
     display: block;
     text-transform: uppercase;
-    font-weight: bold;
+    font-size: 12px;
+    font-family: "coalition";
     padding: 33px 20px;
     text-decoration: none;
     color: rgba(109,234,50,.75);
@@ -497,7 +499,7 @@ nav ul li ul li a{
     position: relative;
     top: 99.5px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: #060c21;
     background-size: cover;
     z-index: 0;
@@ -695,9 +697,13 @@ nav ul li ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 55%;
     flex-direction: column;
-    // border: 1px solid #fff;
+    border: 1px solid;
+    border-image: linear-gradient(to left, #61c69d 0%, #2d72bc 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    padding: 10px 0 10px 0;
 }
 
 .showdetail{
@@ -726,6 +732,27 @@ nav ul li ul li a{
     margin: 10px 0px 10px 0px;
 
 }
+
+.ideastt{
+       border: 1px solid #05cefb;
+    z-index: 7;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    width: 25%;
+    /* right: 50%; */
+    text-align: center;
+    left: 37.5%;
+    border-image: linear-gradient(to left, #61c69d 0%, #2d72bc 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    animation: gradientBG 2s linear infinite;
+}
+
 
 .addcomtitle{
     text-align: center;
@@ -803,7 +830,7 @@ nav ul li ul li a{
 // 			0 0 0px #fff,
 // 			3px -3px 30px #1beabd, 
 // 			-3px 3px 30px #10abff;
-    border-style: hidden
+    border-style: hidden;
     
 }
 
@@ -923,7 +950,7 @@ nav ul li ul li a{
 // 			0 0 0px #fff,
 // 			3px -3px 30px #1beabd, 
 // 			-3px 3px 30px #10abff;
-    border-style: hidden
+    border-style: hidden;
     
 }
 

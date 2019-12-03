@@ -32,16 +32,19 @@
 
 <section class = "showsection">
 <div class = "showdetail">
+    <div class = "ideastt">
    <p class = "showlabel"><strong>Title</strong></p>
    <p class = "showidea"><%=@idea.title%></p>
 
     <p class = "showlabel"><strong>Text</strong></p>
     <p class = "showidea"><%=@idea.text%></p>
+    </div>
 
-
-<h2 class = "addcomtitle">Add a comment</h2>
+<br><br>
 <%= form_for([@idea, @idea.comments.build]) do |idea| %>
  <div class = "showform">
+     <h2 class = "addcomtitle">Add a comment</h2>
+
     <p class = "showlabel"><%= idea.label :commenter %></p>
     <br>
     <p class = "showtitlebox"><%= idea.text_field :commenter %></p>
