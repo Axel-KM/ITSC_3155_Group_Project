@@ -208,7 +208,7 @@
 }
 
 #containertext{
-    overflow: auto;
+    // overflow: auto;
 }
 
 //-----------------------------------------------------------------------------//
@@ -242,7 +242,7 @@
     height: 100px;
     border-radius: 50%;
     background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-    animation: animate 1.5s linear infinite;
+    animation: animate 2s linear infinite;
 }
 
 .loader span:nth-child(1){
@@ -276,7 +276,7 @@
 #loaderp{
     position: absolute;
     top: 33px;
-    padding-left: 12px; 
+    padding-left: 24px; 
     z-index: 1;
     font-size: 30px;
     font-weight: bold;
@@ -289,7 +289,104 @@
 
 //-----------------------------------------------------------------------------//
 
+//neon buttons edit, back, destory
 
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #367909;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+
+.buttons a:hover{
+    color: #255784;
+    background: #367909;
+    box-shadow: 0 0 10px #367909, 0 0 40px #367909, 0 0 80px #2196f3;
+    transition-delay: 1.3s;
+    
+}
+
+.buttons a span{
+    position: absolute;
+    display: block;
+}
+
+.buttons a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#367909);
+    
+}
+
+.buttons a:hover span:nth-child(1){
+   left: 100%;
+    transition: 1s
+    
+}
+
+.buttons a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#367909);
+    
+}
+
+.buttons a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.buttons a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#367909);
+    
+}
+
+.buttons a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.45s;
+}
+
+.buttons a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#367909);
+    
+}
+
+.buttons a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+
+//-----------------------------------------------------------------------------//
 //navigation bar
 
 .menu{
@@ -297,10 +394,11 @@
     width: 100%;
     //background: rgba(6,12,33,.5);
     background: #060c21;
-    padding: 0 100px;
+    padding: 0 100px 18px;
     top: 0;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(3,12,33,.2);
+    z-index: 4;
 }
 
 nav{
@@ -399,11 +497,13 @@ nav ul li ul li a{
     position: relative;
     top: 99.5px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #060c21;
     background-size: cover;
     z-index: 0;
     opacity: .99;
+    color: white;
+    
 }
 
 //-----------------------------------------------------------------------------//
@@ -418,6 +518,7 @@ nav ul li ul li a{
     background-size: cover;
     z-index: 0;
     opacity: .99;
+    
 }
 
 //-----------------------------------------------------------------------------//
@@ -589,6 +690,130 @@ nav ul li ul li a{
     align-items: center;
 }
 
+.showform{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+    // border: 1px solid #fff;
+}
+
+.showdetail{
+     margin: 0;
+     top: 10px;
+    // background: #060c21;
+    // padding: 0;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+    // color: #fff;
+}
+
+.showlabel{
+    text-align: center;
+    font-family: "coalition";
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 16px;
+}
+
+.showidea{
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+
+}
+
+.addcomtitle{
+    text-align: center;
+    font-family: "coalition";
+    font-size: 20px;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-decoration: underline;
+   text-decoration-color: #00bcd4;
+    
+}
+
+//title textbox
+.showtitlebox{
+  vertical-align: center;
+    text-align: center;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+//     box-shadow: inset 0 0 0px #fff,
+// 			0 0 0px #fff,
+// 			3px -3px 30px #1beabd, 
+// 			-3px 3px 30px #10abff;
+	border-radius: 8px;		
+	margin-bottom: 10px;
+}
+
+.showtitlebox input{
+    border: 1px solid #fff;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    border-radius: 6px;
+    border-style: none;
+}
+
+//text textbox
+.showtextbox{
+    vertical-align: center;
+    text-align: center;
+    margin-bottom: 10px;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+//     box-shadow: inset 0 0 0px #fff,
+// 			0 0 0px #fff,
+// 			3px -3px 30px #1beabd, 
+// 			-3px 3px 30px #10abff;
+	border-radius: 8px;		
+	width: 426px;
+	height: 169px;
+		
+}
+
+.showtextbox textarea{
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    border-radius: 8px;
+    vertical-align: center;
+    border: 1px solid #fff;
+    width: 426px;
+    height: 169px;
+    margin-bottom: 10px;
+}
+
+.showform input[type = "submit"]{
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 16px;
+    overflow: hidden;
+    transition: 0.2s;
+    margin-top: 25px;
+    border-radius: 10px;
+//     box-shadow: 0 0 0px #fff,
+// 			0 0 0px #fff,
+// 			3px -3px 30px #1beabd, 
+// 			-3px 3px 30px #10abff;
+    border-style: hidden
+    
+}
+
+.showform input[type = "submit"]:hover{
+    color: #255784;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    // transition-delay: 1.3s;
+}
+
 //-----------------------------------------------------------------------------//
 
 //edit ideas page
@@ -632,7 +857,7 @@ nav ul li ul li a{
    -webkit-text-fill-color: transparent;
    margin-top: 15px;
    font-weight: 900;
-//   margin-bottom: 10px;
+// margin-bottom: 10px;
    font-size: 20px;
 }
 
@@ -642,10 +867,10 @@ nav ul li ul li a{
     vertical-align: center;
     text-align: center;
     background: linear-gradient(21deg, #10abff, #1beabd);
-    box-shadow: inset 0 0 0px #fff,
-			0 0 0px #fff,
-			3px -3px 30px #1beabd, 
-			-3px 3px 30px #10abff;
+//     box-shadow: inset 0 0 0px #fff,
+// 			0 0 0px #fff,
+// 			3px -3px 30px #1beabd, 
+// 			-3px 3px 30px #10abff;
 	border-radius: 8px;		
 }
 
@@ -661,10 +886,10 @@ nav ul li ul li a{
     text-align: center;
     margin-bottom: 10px;
     background: linear-gradient(21deg, #10abff, #1beabd);
-    box-shadow: inset 0 0 0px #fff,
-			0 0 0px #fff,
-			3px -3px 30px #1beabd, 
-			-3px 3px 30px #10abff;
+//     box-shadow: inset 0 0 0px #fff,
+// 			0 0 0px #fff,
+// 			3px -3px 30px #1beabd, 
+// 			-3px 3px 30px #10abff;
 	border-radius: 8px;		
 	width: 426px;
 	height: 169px;
@@ -694,10 +919,10 @@ nav ul li ul li a{
     transition: 0.2s;
     margin-top: 25px;
     border-radius: 10px;
-    box-shadow: 0 0 0px #fff,
-			0 0 0px #fff,
-			3px -3px 30px #1beabd, 
-			-3px 3px 30px #10abff;
+//     box-shadow: 0 0 0px #fff,
+// 			0 0 0px #fff,
+// 			3px -3px 30px #1beabd, 
+// 			-3px 3px 30px #10abff;
     border-style: hidden
     
 }
@@ -755,7 +980,4 @@ nav ul li ul li a{
     width: 100%;
   }
 }
-
-
-
 

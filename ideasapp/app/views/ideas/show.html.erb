@@ -1,3 +1,8 @@
+<p>
+    <strong>Title</strong>
+    <%=@idea.title%>
+</p>
+
 <div class = "menu">
    <a href = "#" class="brand">
        <div class = "loader">
@@ -25,54 +30,60 @@
    </nav>
 </div>       
 
-<section>
-<p>
-    <strong>Title</strong>
-    <%=@idea.title%>
-</p>
+<section class = "showsection">
+<div class = "showdetail">
+   <p class = "showlabel"><strong>Title</strong></p>
+   <p class = "showidea"><%=@idea.title%></p>
 
-<p>
-    <strong>Text:</strong>
-    <%=@idea.text%>
-</p>
+    <p class = "showlabel"><strong>Text</strong></p>
+    <p class = "showidea"><%=@idea.text%></p>
 
-<h2>Comments</h2>
-<% @idea.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
- 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
 
-<h2>Add a comment:</h2>
+<h2 class = "addcomtitle">Add a comment</h2>
 <%= form_for([@idea, @idea.comments.build]) do |idea| %>
-  <p>
-    <%= idea.label :commenter %><br>
-    <%= idea.text_field :commenter %>
-  </p>
-  <p>
-    <%= idea.label :body %><br>
-    <%= idea.text_area :body %>
-  </p>
+ <div class = "showform">
+    <p class = "showlabel"><%= idea.label :commenter %></p>
+    <br>
+    <p class = "showtitlebox"><%= idea.text_field :commenter %></p>
+ 
+
+    <p class = "showlabel"><%= idea.label :body %></p>
+    <br>
+    <p class = "showtextbox"><%= idea.text_area :body %></p>
+
+
   <p>
     <%= idea.submit %>
   </p>
+  </div>
 <% end %> 
 
+<div class = buttons>
+<%= link_to edit_idea_path(@idea) do %>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     Edit
+<% end %>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %>
-            <%= link_to 'Destroy',
-                                        idea_path(@idea),
-                                        method: :delete,
-                                        data: { confirm: 'Are you sure?' } %>
+<%= link_to idea_path(@idea),method: :delete, data: { confirm: 'Are you sure?' } do %>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     Delete
+<% end %>
 
-<%= link_to 'Ideas List', ideas_path %>
+<%= link_to  ideas_path do %>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     Ideas
+<% end %>
 
+</div>
 
 <p>
     <strong>Type:</strong>
@@ -109,4 +120,20 @@
     <%=@idea.updated_at%>
 </p>
 
+</p>
+
+<h2>Comments</h2>
+<% @idea.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+</div>
 </section>
