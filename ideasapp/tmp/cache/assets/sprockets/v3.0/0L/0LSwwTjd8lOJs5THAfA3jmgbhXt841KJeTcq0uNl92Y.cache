@@ -1,0 +1,20 @@
+{:uriI"ìfile://app/assets/stylesheets/fonts/linux_libertine/INSTALL.txt?type=text/plain&id=34972c036da49c06152c2809cd212ce448413b175c4e8c74ece141c4ca18c4c5:ET:load_pathI"app/assets/stylesheets;T:filenameI"=app/assets/stylesheets/fonts/linux_libertine/INSTALL.txt;T:	nameI""fonts/linux_libertine/INSTALL;T:logical_pathI"&fonts/linux_libertine/INSTALL.txt;T:content_typeI"text/plain;T:sourceI"TINSTALL:
+========
+
+1) Windows: 
+Copy fonts into folder font-folder from windows, e.g.
+C:\windows\fonts.
+
+2) Linux: 
+Use system programs such as KDE-Kontrol to install the fonts or
+copy all fonts to the fonts directory in $HOME (~/.fonts).
+These also update Linux specific system files.
+
+Philipp Poll -- philthelion at users.sourceforge.net
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"Kfile-digest://app/assets/stylesheets/fonts/linux_libertine/INSTALL.txt;TTF:charsetI"
+utf-8;F:digest"%ﬂÃêm•987ÖÔ/(Öç "s⁄ù
+‘—ëêﬂõ‰(
+ÿ∂Ì:lengthiT:dependencies_digest"%'ÉiÙ{ﬂf`˙ﬂÇEOD]ˇ˝H|2‚[®∆tÌtèSÂ:idI"E34972c036da49c06152c2809cd212ce448413b175c4e8c74ece141c4ca18c4c5;F:
+mtimel+Ÿj›]

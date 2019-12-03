@@ -35,6 +35,22 @@
 
 <%= form_for :idea, url: ideas_path do |f| %>
     <div class = "newform">
+       
+    <% if @idea.errors.any? %>
+        <div id="error_explanation">
+        <h2>
+            <%= pluralize(@idea.errors.count, "error") %> prohibited
+            this article from being saved:
+        </h2>
+        <ul>
+        <% @idea.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+        </ul>
+        </div>
+    <% end %>
+
+       
         
        <p class = "newlabel"><%= f.label :title %></p>
         <br>
