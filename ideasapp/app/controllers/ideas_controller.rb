@@ -19,6 +19,38 @@ class IdeasController < ApplicationController
         end 
     end
     
+    def music
+        if @idea = Idea.where(labelled: 'Music')
+            render 'index'
+        else
+            @idea = Idea.all
+        end
+    end
+    
+    def art
+        if @idea = Idea.where(labelled: 'Art')
+            render 'index'
+        else
+            @idea = Idea.all
+        end
+    end
+    
+    def movies
+        if @idea = Idea.where(labelled: 'Movies')
+            render 'index'
+        else
+            @idea = Idea.all
+        end
+    end
+    
+    def theatre
+        if @idea = Idea.where(labelled: 'Theatre')
+            render 'index'
+        else
+            @idea = Idea.all
+        end
+    end
+    
     def show
         @idea = Idea.find(params[:id]) 
     end
@@ -26,6 +58,32 @@ class IdeasController < ApplicationController
     def edit
         @idea = Idea.find(params[:id])
     end
+    
+    def uprank
+        
+        @idea = Ideas.find(params[:id])
+        @idea.total_rank += 1;
+        
+        if @idea.update(ideas_params)
+            render 'index'
+        else
+            @idea = Idea.all
+        end
+    end
+    
+    def downrank
+        @idea = Ideas.find(params[:id])
+        @idea.total_rank -= 1;
+        if @idea.update(ideas_params)
+            render 'index'
+        else
+            @idea = Idea.all
+        end
+    end
+    
+    def totalrank
+    end
+    
     
     def update
         

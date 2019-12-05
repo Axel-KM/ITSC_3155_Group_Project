@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   
+  get 'ideas/music'
+  get 'ideas/movies'
+  get 'ideas/art'
+  get 'ideas/theatre'
+  get 'ideas/uprank'
+  get 'ideas/downrank'
+  
   resources :logins, only: [:new, :create, :destroy]
   get 'login/new', to: 'users#new', as: 'signup'
   get 'login', to: 'login#create', as: 'login/index'
@@ -8,7 +15,7 @@ Rails.application.routes.draw do
 
   resources :users
   
-  resources :ideas do 
+  resources :ideas do
     resources :comments
   end
   

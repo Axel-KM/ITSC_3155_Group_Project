@@ -21,10 +21,10 @@
          <li>
             <a href = "#">Categories</a>
             <ul>
-               <li><a href = "#">Music</a></li>
-               <li><a href = "#">Movies</a></li>
-               <li><a href = "#">Theatre</a></li>
-               <li><a href = "#">Art</a></li>
+               <li><%= link_to 'Music', ideas_music_path%></li>
+               <li><%= link_to 'Movies', ideas_movies_path%></li>
+               <li><%= link_to 'Theatre', ideas_theatre_path%></li>
+               <li><%= link_to 'Art', ideas_art_path%></li>
             </ul>
          </li>
       </ul>
@@ -40,7 +40,7 @@
 
 <p class = "description">Select one of the blocks below to with some questions</p>
 
- 
+         
 <!--  <% @idea.each do |id| %>-->
 <!--    <tr>-->
 <!--      <td><%= id.title %></td>-->
@@ -54,7 +54,6 @@
 <!--      <td><%= link_to 'Show', ideas_path(id) %></td>-->
 <!--    </tr>-->
 <!--  <% end %>-->
-  
 
 
 <div class = "container">
@@ -62,12 +61,16 @@
     <!--<%= link_to idea_path(id) do%>-->
     <div class = "box">
         <div class = "content">
-            <h2><%= id.id %></h2>
+            <h2><%= id.total_rank %></h2>
             <h3><%= id.title %></h3>
+            
             <p id = "containercategories"><%= id.labelled %></p>
             <p id = "containertext"><%= id.text %></p>
             <p><%= id.created_at %></p>
             <p><%= link_to 'Show', idea_path(id) %></p>
+            <p><%= link_to 'Up', ideas_uprank_path(id) %></p>
+            <p><%= link_to 'Down', ideas_downrank_path(id) %></p>
+
         </div>
     </div>
     <!--<% end %>-->
