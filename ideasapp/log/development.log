@@ -24038,3 +24038,381 @@ Processing by IdeasController#index as HTML
 Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 152.15.112.70 at 2019-12-05 18:29:22 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 480ms (Views: 471.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 152.15.112.70 at 2019-12-05 18:29:24 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/3" for 152.15.112.70 at 2019-12-05 18:29:27 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:129
+  Rendered ideas/show.html.erb within layouts/application (112.1ms)
+Completed 200 OK in 146ms (Views: 141.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/ideas/3/comments" for 152.15.112.70 at 2019-12-05 18:29:45 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rQgtzjmv4KvDr5i9qpsZLHQzwe5GnIiyKxVffkzIvP0di1GrVvPkGpF5flha+tGpWtIV0grKSVg/uIOjxRbEQQ==", "comment"=>{"commenter"=>"fasdfasdfasfdsa", "body"=>"asdfasdfsafdsafd"}, "commit"=>"Create Comment", "idea_id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Comment:0x00007f18c9d8dc70>):
+  
+app/controllers/comments_controller.rb:4:in `create'
+Started GET "/ideas/3" for 152.15.112.70 at 2019-12-05 18:31:26 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:129
+  Rendered ideas/show.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 118ms (Views: 97.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/ideas" for 152.15.112.70 at 2019-12-05 18:31:27 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 152.15.112.70 at 2019-12-05 18:31:29 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:129
+  Rendered ideas/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/ideas/3/comments" for 152.15.112.70 at 2019-12-05 18:31:39 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DkHGfEuCzBVQdrwUxu5GgRbiLCKBxvRQ6WpL1t5iImK+wroZJN7IpAKgWvE2j44EOAP4Hs2QNbr9x5cLV7xa3g==", "comment"=>{"commenter"=>"", "body"=>"THIS WILL WORK "}, "commit"=>"Create Comment", "idea_id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `text' for #<Comment:0x00007f18dcca8860>
+Did you mean?  test):
+  
+app/controllers/comments_controller.rb:4:in `create'
+Started POST "/ideas/3/comments" for 152.15.112.70 at 2019-12-05 18:31:52 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bT/QMyto7I9z7K22BwgJtebyRQxWFzhmEsIU5si19LqHUYuT/1zoUrjb1NCR3JZMXi0Ysa37oPEfHQUPM0uCfg==", "comment"=>{"commenter"=>"THIS WILL WORK ", "body"=>"THIS WILL WORK "}, "commit"=>"Create Comment", "idea_id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `text' for #<Comment:0x00007f18dcb78148>
+Did you mean?  test):
+  
+app/controllers/comments_controller.rb:4:in `create'
+Started POST "/ideas/3/comments" for 152.15.112.70 at 2019-12-05 18:32:10 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bT/QMyto7I9z7K22BwgJtebyRQxWFzhmEsIU5si19LqHUYuT/1zoUrjb1NCR3JZMXi0Ysa37oPEfHQUPM0uCfg==", "comment"=>{"commenter"=>"THIS WILL WORK ", "body"=>"THIS WILL WORK "}, "commit"=>"Create Comment", "idea_id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[36mComment Create (0.9ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "idea_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "THIS WILL WORK "], ["body", "THIS WILL WORK "], ["idea_id", 3], ["created_at", "2019-12-05 18:32:10.901238"], ["updated_at", "2019-12-05 18:32:10.901238"]]
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to https://4f841a1e39a24b8d82e3937af5eaa0fe.vfs.cloud9.us-east-2.amazonaws.com/ideas.3
+Completed 302 Found in 36ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/ideas.3" for 152.15.112.70 at 2019-12-05 18:32:10 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as 
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 152.15.112.70 at 2019-12-05 18:32:12 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:129
+  Rendered ideas/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/ideas/3/comments" for 152.15.112.70 at 2019-12-05 18:32:38 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pkzlnuv8G3TufntDmDYg/H0A6qOC/c5cx1a5KoCq9ioWz5n7hKAfxbyonaZoV+h5U+E+n86rD7bT+2X3CXSOlg==", "comment"=>{"commenter"=>"THIS WILL WORK ", "body"=>"THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK "}, "commit"=>"Create Comment", "idea_id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "idea_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "THIS WILL WORK "], ["body", "THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK "], ["idea_id", 3], ["created_at", "2019-12-05 18:32:38.061130"], ["updated_at", "2019-12-05 18:32:38.061130"]]
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to https://4f841a1e39a24b8d82e3937af5eaa0fe.vfs.cloud9.us-east-2.amazonaws.com/ideas.3
+Completed 302 Found in 13ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/ideas.3" for 152.15.112.70 at 2019-12-05 18:32:38 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as 
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 152.15.112.70 at 2019-12-05 18:32:39 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:129
+  Rendered ideas/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/new" for 152.15.112.70 at 2019-12-05 18:35:49 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 49ms (Views: 37.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ideas" for 152.15.112.70 at 2019-12-05 18:35:51 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 152.15.112.70 at 2019-12-05 18:35:52 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:129
+  Rendered ideas/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas" for 152.15.112.70 at 2019-12-05 18:35:54 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/4" for 152.15.112.70 at 2019-12-05 18:35:55 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:129
+  Rendered ideas/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/ideas/4/comments" for 152.15.112.70 at 2019-12-05 18:36:20 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JclOAHCaRNzECLc4SQO7tyQez5f7PcCjmYANlrDBYZEJYDPZH7kt8YvP3a+CJVK/50/EKgn6pGb3fsxdiIThdw==", "comment"=>{"commenter"=>"THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK ", "body"=>"THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK "}, "commit"=>"Create Comment", "idea_id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Comment:0x00007f18dcc80720>):
+  
+app/controllers/comments_controller.rb:4:in `create'
+Started GET "/" for 152.15.112.70 at 2019-12-05 18:40:19 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 152.15.112.70 at 2019-12-05 18:40:21 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/2" for 152.15.112.70 at 2019-12-05 18:40:24 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:129
+  Rendered ideas/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/ideas/2/comments" for 152.15.112.70 at 2019-12-05 18:40:32 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bdBaimuGHW1YGBHIIenmLDPEuTO2gthxmkoR4/4bzGw/EtDfVYj2qyj0PXW9LVmPJJv0kzEnOpSxmCRbtSWmDg==", "comment"=>{"commenter"=>"THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK ", "body"=>"THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK "}, "commit"=>"Create Comment", "idea_id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to https://4f841a1e39a24b8d82e3937af5eaa0fe.vfs.cloud9.us-east-2.amazonaws.com/ideas.2
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas.2" for 152.15.112.70 at 2019-12-05 18:40:32 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as 
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/2" for 152.15.112.70 at 2019-12-05 18:40:34 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:129
+  Rendered ideas/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/ideas/2/comments" for 152.15.112.70 at 2019-12-05 18:40:56 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"reAL9Rr58LkIO6HYmEa1PlY8gRxddUbbsmTKdEWytGH/IoGgJPcbf3jXjWUEggqdQWPMvNrQpD6Ztv/MDozeAw==", "comment"=>{"commenter"=>"THIS WILL WORK ", "body"=>"THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK "}, "commit"=>"Create Comment", "idea_id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "idea_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "THIS WILL WORK "], ["body", "THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK THIS WILL WORK "], ["idea_id", 2], ["created_at", "2019-12-05 18:40:56.121789"], ["updated_at", "2019-12-05 18:40:56.121789"]]
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to https://4f841a1e39a24b8d82e3937af5eaa0fe.vfs.cloud9.us-east-2.amazonaws.com/ideas.2
+Completed 302 Found in 18ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/ideas.2" for 152.15.112.70 at 2019-12-05 18:40:56 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as 
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/2" for 152.15.112.70 at 2019-12-05 18:40:57 +0000
+Cannot render console from 152.15.112.70! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:23
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:129
+  Rendered ideas/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.2ms)
+
+
