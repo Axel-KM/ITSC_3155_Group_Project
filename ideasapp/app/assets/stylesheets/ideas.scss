@@ -6,6 +6,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 // ----------------------------------------------------------------------------//
 
@@ -178,7 +179,10 @@
      max-height: 100px;
      overflow: auto;
      user-select: none;
+     overflow-y: hidden;
 }
+
+
 
  .box .content a{
      position: relative;
@@ -505,8 +509,8 @@ nav ul li ul li a{
     z-index: 0;
     opacity: .99;
     color: white;
-    
 }
+
 
 //-----------------------------------------------------------------------------//
 
@@ -684,12 +688,13 @@ nav ul li ul li a{
 //show idea page 
 
 .show-body{
-     margin: 0;
-     background: #060c21;
-     padding: 0;
+    margin: 0;
+    background: #060c21;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
 }
 
 .showform{
@@ -709,7 +714,8 @@ nav ul li ul li a{
 .showdetail{
      margin: 0;
      top: 10px;
-    // background: #060c21;
+     height: 100%;
+     background: #060c21;
     // padding: 0;
     // display: flex;
     // justify-content: center;
@@ -734,7 +740,7 @@ nav ul li ul li a{
 }
 
 .ideastt{
-       border: 1px solid #05cefb;
+    border: 1px solid #05cefb;
     z-index: 7;
     display: flex;
     position: relative;
@@ -751,6 +757,9 @@ nav ul li ul li a{
     border-image-slice: 1;
     border-width: 3px;
     animation: gradientBG 2s linear infinite;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 
@@ -764,6 +773,20 @@ nav ul li ul li a{
    -webkit-text-fill-color: transparent;
    text-decoration: underline;
    text-decoration-color: #00bcd4;
+    
+}
+
+.comtitle{
+    text-align: center;
+    font-family: "coalition";
+    font-size: 20px;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(#89ff00,#00bcd4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-decoration: underline;
+   text-decoration-color: #00bcd4;
+   margin-top: 10px;
     
 }
 
@@ -839,6 +862,26 @@ nav ul li ul li a{
     background: linear-gradient(21deg, #10abff, #1beabd);
     box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
     // transition-delay: 1.3s;
+}
+
+.additionalinfobox{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.additionalinfo{
+    display: flex;
+    border: 1px solid #fff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 27%;
+    border-image: linear-gradient(to left, #61c69d 0%, #2d72bc 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    border-radius: 6px;
 }
 
 //-----------------------------------------------------------------------------//
@@ -1007,4 +1050,3 @@ nav ul li ul li a{
     width: 100%;
   }
 }
-
