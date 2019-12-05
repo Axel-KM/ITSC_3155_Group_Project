@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  get 'login/index'
   
-  resources :ideas
+  resources :logins, only: [:new, :create, :destroy]
+  get 'login/new', to: 'users#new', as: 'signup'
+  get 'login', to: 'login#create', as: 'login/index'
+  get 'login/destroy', to: 'login#destroy', as: 'logout'
+  
+
+  resources :users
   
   resources :ideas do 
     resources :comments
