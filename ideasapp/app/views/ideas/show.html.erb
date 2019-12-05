@@ -1,3 +1,9 @@
+<style>
+    html{
+        background: 060c21;
+        background-size: cover;
+    }
+</style>
 <p>
     <strong>Title</strong>
     <%=@idea.title%>
@@ -88,6 +94,8 @@
 
 </div>
 
+<div class = "additionalinfobox">
+    <div class = "additionalinfo">
 <p>
     <strong>Type:</strong>
     <%=@idea.type%>
@@ -122,10 +130,10 @@
     <strong>updated:</strong>
     <%=@idea.updated_at%>
 </p>
+</div>
+</div>
 
-</p>
-
-<h2>Comments</h2>
+<h2 class = "comtitle">Comments</h2>
 <% @idea.comments.each do |comment| %>
   <p>
     <strong>Commenter:</strong>
