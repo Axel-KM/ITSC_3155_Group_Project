@@ -25840,3 +25840,1679 @@ Processing by IdeasController#music as HTML
 Completed 200 OK in 62ms (Views: 61.5ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 173.92.115.138 at 2019-12-06 05:20:47 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 652ms (Views: 645.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 05:20:50 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 49ms (Views: 38.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 05:20:52 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:153
+  Rendered ideas/show.html.erb within layouts/application (84.3ms)
+Completed 200 OK in 114ms (Views: 107.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/ideas/4/comments" for 173.92.115.138 at 2019-12-06 05:22:56 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1DePpeohuy0PjxlbxXHHcPrderTW1Dm6zQLC++Gf7RyovJXme6YkfBsbrFUiqg8fMeIItdHwSbRdI2GUqsppqA==", "comment"=>{"commenter"=>"Yooooo", "body"=>"THus ius a afgnhkjg"}, "commit"=>"Create Comment", "idea_id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "idea_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "Yooooo"], ["body", "THus ius a afgnhkjg"], ["idea_id", 4], ["created_at", "2019-12-06 05:22:56.338602"], ["updated_at", "2019-12-06 05:22:56.338602"]]
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas.4
+Completed 302 Found in 15ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/ideas.4" for 173.92.115.138 at 2019-12-06 05:22:56 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as 
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/uprank.4" for 173.92.115.138 at 2019-12-06 05:26:42 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#uprank as 
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant IdeasController::Ideas):
+  
+app/controllers/ideas_controller.rb:64:in `uprank'
+Started GET "/ideas.4" for 173.92.115.138 at 2019-12-06 05:37:16 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as 
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 286ms (Views: 267.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 05:37:18 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 05:39:29 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 260ms (Views: 257.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 05:41:55 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 256ms (Views: 253.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:12:27 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 253ms (Views: 250.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/3/edit" for 173.92.115.138 at 2019-12-06 06:12:36 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (9.4ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:59
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 23.3ms | ActiveRecord: 9.4ms)
+
+
+Started PATCH "/ideas/3" for 173.92.115.138 at 2019-12-06 06:17:04 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lYSiMqkTmPvcsjcspOh36+buvNlOSWd7ou+qvQR+2RWmKxdr8U4i/L2POcwwU7eFbPzQLeoAe3ieV73EFL3UXg==", "idea"=>{"title"=>"How I Met Your Mother", "text"=>"On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this."}, "commit"=>"Save Idea", "id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:90
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[36mIdea Update (0.2ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "text" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "How I Met Your Mother"], ["text", "On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this."], ["updated_at", "2019-12-06 06:17:04.850255"], ["id", 3]]
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas/3
+Completed 302 Found in 15ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:17:04 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:29:44 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 254ms (Views: 252.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:32:32 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 267ms (Views: 254.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:33:21 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 253ms (Views: 250.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:33:30 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:33:33 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:33:44 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3/edit" for 173.92.115.138 at 2019-12-06 06:33:49 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:59
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/ideas/3" for 173.92.115.138 at 2019-12-06 06:33:51 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"keMkWD5cUh6EOrrd4Uvf8HBT9ZlREpRH3VGos9X6+vKiTJEBZgHoGeUHtD118B+e+kGZbfVbiETh6b/KxTn3uQ==", "idea"=>{"title"=>"How I Met Your Mother", "text"=>"On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this."}, "commit"=>"Save Idea", "id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:90
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas/3
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:33:51 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/ideas/3" for 173.92.115.138 at 2019-12-06 06:34:19 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Eit0F8Aayj26khIZ0t7xdz+swtV++1KOnUZoLoIwa0Pa5G6Pf0CsMpPRJfqwqb84RBg3RMCOkI+avBqNqyYpdg==", "idea"=>{"title"=>"How I Met Your Mother is a fantastic show sir", "text"=>"On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this."}, "commit"=>"Save Idea", "id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:90
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/ideas/3" for 173.92.115.138 at 2019-12-06 06:34:31 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7DGwNuUouLFPFD54QUgbByscimsXvTC8YAJjEXUM1HMk/qquWnLevmZXCZsjP1VIUKh/+qnI8r1n+BGyXBqWRg==", "idea"=>{"title"=>"How I Met Your Mother", "text"=>"On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this."}, "commit"=>"Save Idea", "id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:90
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[36mIdea Update (0.2ms)[0m  [1m[33mUPDATE "ideas" SET "text" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["text", "On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this.On the first episode of How I Met Your Mother, Ted Mosby sees this beautiful girl across the bar. That is the day that he should have realised that he is in love with this girl. Her name is Robin with a last name I cannot spell... So we will move on from this."], ["updated_at", "2019-12-06 06:34:31.616722"], ["id", 3]]
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas/3
+Completed 302 Found in 19ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:34:31 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3/edit" for 173.92.115.138 at 2019-12-06 06:34:51 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:59
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:35:45 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 256ms (Views: 254.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:35:46 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:35:48 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:36:04 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 250ms (Views: 247.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:36:17 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:36:35 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 273ms (Views: 270.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:37:27 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 255ms (Views: 251.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:37:35 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 252ms (Views: 250.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:40:17 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.7ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ideas/3" for 173.92.115.138 at 2019-12-06 06:40:20 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/3" for 173.92.115.138 at 2019-12-06 06:40:25 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4jrlx33fUdmQeF8KQUIsHrCEjjljXW1TkrIvnjOMJ5gq9f9fwoU31rk7aOkjNWJRyzB7qN0or1KVSF09GpplrQ==", "id"=>"3"}
+  [1m[36mIdea Load (0.7ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas
+Completed 302 Found in 19ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:40:25 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 06:40:39 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/4" for 173.92.115.138 at 2019-12-06 06:40:43 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HQv3CGFEC147HhqD77Ax6L+llDx8VhDD8BVlFmgu/BfVxO2Q3h5tURJdLWCNx3+nxBFhrcIj0sL37xe1QTi+Ig==", "id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (1.4ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: foreign key constraint failed: DELETE FROM "ideas" WHERE "ideas"."id" = ?):
+  
+app/controllers/ideas_controller.rb:101:in `destroy'
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:40:47 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/5" for 173.92.115.138 at 2019-12-06 06:40:49 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 5]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/5" for 173.92.115.138 at 2019-12-06 06:40:52 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1T8VmBEv8dLrfM4vAjFzudiacrA3+pIx04fvKpgteeEd8A8ArnWX3cI/+cxgRj32oy6HIYmPUDDUfZ2JsTs71A==", "id"=>"5"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas
+Completed 302 Found in 14ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:40:52 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/6" for 173.92.115.138 at 2019-12-06 06:40:54 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 6]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/6" for 173.92.115.138 at 2019-12-06 06:40:56 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MlZspBcJCMLcLVPUQk2pGyCNGtHRekGsu9T3mNzRpNf6mXY8qFNuzfVuZDcgOudUWznvQG8Pg628LoU79cfm4g==", "id"=>"6"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (0.9ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas
+Completed 302 Found in 13ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:40:56 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/8" for 173.92.115.138 at 2019-12-06 06:40:58 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 8]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/8" for 173.92.115.138 at 2019-12-06 06:41:00 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4Squ5zu9XadeT7al74pNfWQTpfZP9y+IBWPTATUixHMp5bR/hOc7qHcMgUaN/QMyH6dQZ/GC7YkCmaGiHDSGRg==", "id"=>"8"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (0.9ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas
+Completed 302 Found in 25ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:41:00 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/9" for 173.92.115.138 at 2019-12-06 06:41:02 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 9]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/9" for 173.92.115.138 at 2019-12-06 06:41:05 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zCx+8N/84HTlC3lL54i2v7gMy32FKo+MulRWXkvMBWAE42RoYKaGe8xITqiF//jww7g+7DtfTY29riT9YtpHVQ==", "id"=>"9"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas
+Completed 302 Found in 12ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:41:06 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/10" for 173.92.115.138 at 2019-12-06 06:41:07 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 10]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/10" for 173.92.115.138 at 2019-12-06 06:41:09 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"svT2jxeERjCJKV37jYKP3ZzAMCcxq1c6CpRmmd+Ut0B6O+wXqN4gP6Bqahjv9cGS53TFto/elTsNbhQ69oL1dQ==", "id"=>"10"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas
+Completed 302 Found in 14ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:41:09 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/11" for 173.92.115.138 at 2019-12-06 06:41:10 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 11]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/11" for 173.92.115.138 at 2019-12-06 06:41:12 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qGQYmkrBUQchtp97XPjxGxQea3bXitLMMxMQSz9DGjJgqwIC9Zs3CAj1qJg+j79Ub6qe52n/EM006WLoFlVYBw==", "id"=>"11"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (0.9ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas
+Completed 302 Found in 13ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:41:12 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 06:41:14 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/4" for 173.92.115.138 at 2019-12-06 06:41:16 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gvHBfX6gpP29xSVmAqO4eseX6jCeNREesadFKRU7DHhKPtvlwfrC8pSGEoVg1PY1vCMfoSBA0x+2XTeKPC1OTQ==", "id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (0.6ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: foreign key constraint failed: DELETE FROM "ideas" WHERE "ideas"."id" = ?):
+  
+app/controllers/ideas_controller.rb:101:in `destroy'
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:46:33 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 06:46:34 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/new" for 173.92.115.138 at 2019-12-06 06:46:39 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ideas" for 173.92.115.138 at 2019-12-06 06:46:50 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bwYJMTnQGzPRkJj3wWtttObHszy88nV+zhFadkoJR18q954kfWyReXervzfirdxbnBWvaN+XAqobdKcmVeRtCQ==", "idea"=>{"title"=>"How I Met Your Mother", "text"=>"dddddddgxsfxcgfdxghdfchfdhdfhfdhhdhdchdhdhd", "labelled"=>"Music"}, "commit"=>"Post Idea"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:15
+  [1m[36mIdea Create (0.9ms)[0m  [1m[32mINSERT INTO "ideas" ("text", "title", "labelled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["text", "dddddddgxsfxcgfdxghdfchfdhdfhfdhhdhdchdhdhd"], ["title", "How I Met Your Mother"], ["labelled", "Music"], ["created_at", "2019-12-06 06:46:50.528390"], ["updated_at", "2019-12-06 06:46:50.528390"]]
+  ↳ app/controllers/ideas_controller.rb:15
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:15
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas/5
+Completed 302 Found in 13ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/ideas/5" for 173.92.115.138 at 2019-12-06 06:46:50 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 5]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ideas/5" for 173.92.115.138 at 2019-12-06 06:46:56 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uNxWCLwNIKw3qRf7QhtTIpOMMF1O5loi6aPGXVO1eG9wE0yQA1dGox7qIBggbB1t6DjFzPCTmCPuWbT+eqM6Wg==", "id"=>"5"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas
+Completed 302 Found in 26ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:46:56 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:47:11 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:47:13 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:47:15 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 06:48:01 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:48:05 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ideas/2/edit" for 173.92.115.138 at 2019-12-06 06:48:08 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:59
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/ideas/2" for 173.92.115.138 at 2019-12-06 06:50:13 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kZAYUyYyNQFzk9sf2wQ1g47vQZ8io9oTDthfzPtG+nax97eNZPxe2bZzcnUgltrcwAvqns5mqM4OlQefigd3Xg==", "idea"=>{"title"=>"Welcome!", "text"=>"Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! "}, "commit"=>"Save Idea", "id"=>"2"}
+  [1m[36mIdea Load (0.9ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:90
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[36mIdea Update (0.2ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "text" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "Welcome!"], ["text", "Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! "], ["updated_at", "2019-12-06 06:50:13.599810"], ["id", 2]]
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas/2
+Completed 302 Found in 13ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:50:13 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:53:36 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:54:21 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:152
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:54:46 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:154
+  Rendered ideas/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:56:10 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/2/edit" for 173.92.115.138 at 2019-12-06 06:56:19 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:59
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/ideas/2" for 173.92.115.138 at 2019-12-06 06:56:27 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1wt7nsvdpeOiIPfJckqnfKDf1DT9FfeAGSXLkS3+T7D3bNRAiRPOO2fAXqOJ2Egj7jt/NRHQhV0ZaJPCXL/CmA==", "idea"=>{"title"=>"Welcome!", "text"=>"Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! \r\nThank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! "}, "commit"=>"Save Idea", "id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:90
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[36mIdea Update (2.5ms)[0m  [1m[33mUPDATE "ideas" SET "text" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["text", "Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! \r\nThank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! Thank you for visiting our site. Here are a list of guidelines to follow on our site: \r\n\r\nDo not use inappropriate language in any scenario\r\nDo not post inappropriate content under any circumstance\r\nDo not involve yourself in abusive behavior of other users\r\nDo not be a fan of GitHub\r\n\r\nWe hope you enjoy our site! "], ["updated_at", "2019-12-06 06:56:27.778371"], ["id", 2]]
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas/2
+Completed 302 Found in 18ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:56:27 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:56:58 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 266ms (Views: 263.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:57:15 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 263ms (Views: 260.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:57:24 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 255ms (Views: 252.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:59:04 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:59:33 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.7ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 06:59:58 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 261ms (Views: 258.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:03:19 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/new" for 173.92.115.138 at 2019-12-06 07:03:32 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas/music" for 173.92.115.138 at 2019-12-06 07:03:34 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#music as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."labelled" = ?[0m  [["labelled", "Music"]]
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/movies" for 173.92.115.138 at 2019-12-06 07:03:36 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#movies as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."labelled" = ?[0m  [["labelled", "Movies"]]
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/music" for 173.92.115.138 at 2019-12-06 07:03:38 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#music as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."labelled" = ?[0m  [["labelled", "Music"]]
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/movies" for 173.92.115.138 at 2019-12-06 07:03:44 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#movies as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."labelled" = ?[0m  [["labelled", "Movies"]]
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/movies" for 173.92.115.138 at 2019-12-06 07:03:44 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#movies as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."labelled" = ?[0m  [["labelled", "Movies"]]
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/music" for 173.92.115.138 at 2019-12-06 07:03:46 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#music as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."labelled" = ?[0m  [["labelled", "Music"]]
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/new" for 173.92.115.138 at 2019-12-06 07:03:51 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:03:56 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:07:22 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:11:09 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 268ms (Views: 265.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:11:48 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 256ms (Views: 253.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:11:59 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 250ms (Views: 248.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:12:06 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 268ms (Views: 265.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:12:41 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:12:48 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:14:46 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 259ms (Views: 257.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:15:03 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 259ms (Views: 257.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:15:18 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 260ms (Views: 258.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:15:28 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:15:44 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 252ms (Views: 251.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:15:57 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 252ms (Views: 250.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:16:05 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 260ms (Views: 258.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:16:14 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 253ms (Views: 251.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:16:24 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 261ms (Views: 260.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:16:51 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:18:03 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:26:45 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:50:52 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 07:50:58 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:51:02 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:52:01 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `article' for #<Comment:0x00007f0441a6b3e0>):
+    163:     <%= comment.body %>
+    164:   </p>
+    165:   <p>
+    166:     <%= link_to 'Destroy Comment', [comment.article, comment],
+    167:                 method: :delete,
+    168:                 data: { confirm: 'Are you sure?' } %>
+    169: </p>
+  
+app/views/ideas/show.html.erb:166:in `block in _app_views_ideas_show_html_erb___637026072069690375_69828128956480'
+app/views/ideas/show.html.erb:155:in `_app_views_ideas_show_html_erb___637026072069690375_69828128956480'
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:52:08 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `article' for #<Comment:0x0000000004ca7e58>):
+    163:     <%= comment.body %>
+    164:   </p>
+    165:   <p>
+    166:     <%= link_to 'Destroy Comment', [comment.article, comment],
+    167:                 method: :delete,
+    168:                 data: { confirm: 'Are you sure?' } %>
+    169: </p>
+  
+app/views/ideas/show.html.erb:166:in `block in _app_views_ideas_show_html_erb___637026072069690375_36926140'
+app/views/ideas/show.html.erb:155:in `_app_views_ideas_show_html_erb___637026072069690375_36926140'
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:52:23 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:54:36 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/4/edit" for 173.92.115.138 at 2019-12-06 07:54:45 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:59
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/ideas/4" for 173.92.115.138 at 2019-12-06 07:54:49 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U/zMzk5zmSvxr4lix0ckRX+96xqnYxGYOCOkJvJPR1ebM9ZW8Sn/JNjsvoGlMGoKBAkeixkW05k/2daF21kFYg==", "id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[36mIdea Destroy (0.6ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/ideas_controller.rb:101
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ideas_controller.rb:101
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: foreign key constraint failed: DELETE FROM "ideas" WHERE "ideas"."id" = ?):
+  
+app/controllers/ideas_controller.rb:101:in `destroy'
+Started GET "/ideas" for 173.92.115.138 at 2019-12-06 07:54:51 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:44
+  Rendered ideas/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/2" for 173.92.115.138 at 2019-12-06 07:54:53 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 2]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:54:55 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:55:10 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/4/edit" for 173.92.115.138 at 2019-12-06 07:55:12 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:59
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/ideas/4" for 173.92.115.138 at 2019-12-06 07:56:27 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2aoiN5X87T3p4Q6/eQCi2tvId2jaLHJPJXDBUmC6uvhQtEQayT02zAxWKqOrrM7CSB3wDrWb4kx6y1rUNj2Qsw==", "idea"=>{"title"=>"Heartless", "text"=>"The Weeknd just dropped his newest hit single called Heartless. It is one of the most successful songs of his career as he is seen to be wearing a red suit. The red suit costs an estimated $10,000. This is impressive because $10,000 is a lot of money. There is no way that can go unnoticed. The Weeknd just dropped his newest hit single called Heartless. It is one of the most successful songs of his career as he is seen to be wearing a red suit. The red suit costs an estimated $10,000. This is impressive because $10,000 is a lot of money. There is no way that can go unnoticed. The Weeknd just dropped his newest hit single called Heartless. It is one of the most successful songs of his career as he is seen to be wearing a red suit. The red suit costs an estimated $10,000. This is impressive because $10,000 is a lot of money. There is no way that can go unnoticed. The Weeknd just dropped his newest hit single called Heartless. It is one of the most successful songs of his career as he is seen to be wearing a red suit. The red suit costs an estimated $10,000. This is impressive because $10,000 is a lot of money. There is no way that can go unnoticed. The Weeknd just dropped his newest hit single called Heartless. It is one of the most successful songs of his career as he is seen to be wearing a red suit. The red suit costs an estimated $10,000. This is impressive because $10,000 is a lot of money. There is no way that can go unnoticed. "}, "commit"=>"Save Idea", "id"=>"4"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:90
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[36mIdea Update (0.2ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "text" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "Heartless"], ["text", "The Weeknd just dropped his newest hit single called Heartless. It is one of the most successful songs of his career as he is seen to be wearing a red suit. The red suit costs an estimated $10,000. This is impressive because $10,000 is a lot of money. There is no way that can go unnoticed. The Weeknd just dropped his newest hit single called Heartless. It is one of the most successful songs of his career as he is seen to be wearing a red suit. The red suit costs an estimated $10,000. This is impressive because $10,000 is a lot of money. There is no way that can go unnoticed. The Weeknd just dropped his newest hit single called Heartless. It is one of the most successful songs of his career as he is seen to be wearing a red suit. The red suit costs an estimated $10,000. This is impressive because $10,000 is a lot of money. There is no way that can go unnoticed. The Weeknd just dropped his newest hit single called Heartless. It is one of the most successful songs of his career as he is seen to be wearing a red suit. The red suit costs an estimated $10,000. This is impressive because $10,000 is a lot of money. There is no way that can go unnoticed. The Weeknd just dropped his newest hit single called Heartless. It is one of the most successful songs of his career as he is seen to be wearing a red suit. The red suit costs an estimated $10,000. This is impressive because $10,000 is a lot of money. There is no way that can go unnoticed. "], ["updated_at", "2019-12-06 07:56:27.119147"], ["id", 4]]
+  ↳ app/controllers/ideas_controller.rb:92
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:92
+Redirected to https://6fde32888ab7480aaaeef88d4237f3f8.vfs.cloud9.us-east-1.amazonaws.com/ideas/4
+Completed 302 Found in 15ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/ideas/4" for 173.92.115.138 at 2019-12-06 07:56:27 +0000
+Cannot render console from 173.92.115.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 4]]
+  ↳ app/views/ideas/show.html.erb:155
+  Rendered ideas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+

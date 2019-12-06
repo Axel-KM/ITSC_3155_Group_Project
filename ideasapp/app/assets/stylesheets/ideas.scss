@@ -8,6 +8,10 @@
     padding: 0;
     
 }
+body{
+    padding: 20px;
+    background: #060c21;
+}
 // ----------------------------------------------------------------------------//
 
 @font-face {
@@ -174,9 +178,9 @@
      margin: 0;
      padding: 0;
      color: #fff;
-     font-size: 16px;
+     font-size: 14px;
      word-wrap: break-word;
-     max-height: 100px;
+     max-height: 65px;
      overflow: auto;
      user-select: none;
      overflow-y: hidden;
@@ -299,7 +303,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    //margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .buttons a{
@@ -479,7 +484,7 @@ nav ul li ul li a{
     background: #060c21;
     background-size: cover;
     z-index: 0;
-    opacity: .99;
+    //opacity: .99;
 }
 
 //-----------------------------------------------------------------------------//
@@ -493,7 +498,7 @@ nav ul li ul li a{
     background: #060c21;
     background-size: cover;
     z-index: 0;
-    opacity: .99;
+    //opacity: .99;
 }
 
 //-----------------------------------------------------------------------------//
@@ -501,13 +506,13 @@ nav ul li ul li a{
 //show idea page section area
 .showsection{
     position: relative;
-    top: 82.5px;
+    top: 99.5px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #060c21;
     background-size: cover;
     z-index: 0;
-    opacity: .99;
+    //opacity: .99;
     color: white;
 }
 
@@ -523,7 +528,7 @@ nav ul li ul li a{
     background: #060c21;
     background-size: cover;
     z-index: 0;
-    opacity: .99;
+    //opacity: .99;
     
 }
 
@@ -711,6 +716,29 @@ nav ul li ul li a{
     padding: 10px 0 10px 0;
 }
 
+.showcomments{
+    border: 1px solid #05cefb;
+    z-index: 7;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    width: 30%;
+    /* right: 50%; */
+    text-align: center;
+    left: 35%;
+    border-image: linear-gradient(to left, #61c69d 0%, #2d72bc 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    animation: gradientBG 2s linear infinite;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
 .showdetail{
      margin: 0;
      top: 10px;
@@ -749,10 +777,10 @@ nav ul li ul li a{
     justify-content: center;
     align-items: center;
     top: 10px;
-    width: 25%;
+    width: 60%;
     /* right: 50%; */
     text-align: center;
-    left: 37.5%;
+    left: 20%;
     border-image: linear-gradient(to left, #61c69d 0%, #2d72bc 100%);
     border-image-slice: 1;
     border-width: 3px;
@@ -872,16 +900,17 @@ nav ul li ul li a{
 }
 
 .additionalinfo{
+    border: 1px solid #05cefb;
+    z-index: 7;
     display: flex;
-    border: 1px solid #fff;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 27%;
+    width: 30%;
     border-image: linear-gradient(to left, #61c69d 0%, #2d72bc 100%);
     border-image-slice: 1;
     border-width: 3px;
-    border-radius: 6px;
+    animation: gradientBG 2s linear infinite;
 }
 
 //-----------------------------------------------------------------------------//

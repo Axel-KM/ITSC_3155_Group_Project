@@ -47,26 +47,6 @@
     </div>
 
 <br><br>
-<%= form_for([@idea, @idea.comments.build]) do |idea| %>
- <div class = "showform">
-     <h2 class = "addcomtitle">Add a comment</h2>
-
-    <p class = "showlabel"><%= idea.label :commenter %></p>
-    <br>
-    <p class = "showtitlebox"><%= idea.text_field :commenter %></p>
- 
-
-    <p class = "showlabel"><%= idea.label :body %></p>
-    <br>
-    <p class = "showtextbox"><%= idea.text_area :body %></p>
-
-
-  <p>
-    <%= idea.submit %>
-  </p>
-  </div>
-<% end %> 
-
 <div class = buttons>
 <%= link_to edit_idea_path(@idea) do %>
     <span></span>
@@ -109,6 +89,27 @@
 <% end %>
 
 </div>
+<%= form_for([@idea, @idea.comments.build]) do |idea| %>
+ <div class = "showform">
+     <h2 class = "addcomtitle">Add a comment</h2>
+
+    <p class = "showlabel"><%= idea.label :commenter %></p>
+    <br>
+    <p class = "showtitlebox"><%= idea.text_field :commenter %></p>
+ 
+
+    <p class = "showlabel"><%= idea.label :body %></p>
+    <br>
+    <p class = "showtextbox"><%= idea.text_area :body %></p>
+
+
+  <p>
+    <%= idea.submit %>
+  </p>
+  </div>
+<% end %> 
+
+
 
 <div class = "additionalinfobox">
     <div class = "additionalinfo">
@@ -149,6 +150,7 @@
 </div>
 </div>
 
+<div class = showcomments>
 <h2 class = "comtitle">Comments</h2>
 <% @idea.comments.each do |comment| %>
   <p>
@@ -160,7 +162,8 @@
     <strong>Comment:</strong>
     <%= comment.body %>
   </p>
+  
 <% end %>
-
+</div>
 </div>
 </section>
