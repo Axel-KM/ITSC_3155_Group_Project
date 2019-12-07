@@ -4,6 +4,12 @@ class CommentsController < ApplicationController
         @comment = @idea.comments.create(comment_params)
         redirect_to ideas_path(@idea)
     end
+    def destroy
+        @idea = Idea.find(params[:idea_id])
+        @comment = @idea.comments.find(params[:id])
+        @comment.destroy
+        redirect_to ideas_path(@idea)
+    end
 
     private
         def comment_params
