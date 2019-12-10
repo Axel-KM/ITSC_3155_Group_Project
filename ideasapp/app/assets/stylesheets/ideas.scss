@@ -586,10 +586,10 @@ nav ul li ul li a{
     vertical-align: center;
     text-align: center;
     background: linear-gradient(21deg, #10abff, #1beabd);
-    box-shadow: inset 0 0 0px #fff,
-			0 0 0px #fff,
-			3px -3px 30px #1beabd, 
-			-3px 3px 30px #10abff;
+//     box-shadow: inset 0 0 0px #fff,
+// 			0 0 0px #fff,
+// 			3px -3px 30px #1beabd, 
+// 			-3px 3px 30px #10abff;
 	border-radius: 8px;		
 }
 
@@ -605,10 +605,10 @@ nav ul li ul li a{
     text-align: center;
     margin-bottom: 10px;
     background: linear-gradient(21deg, #10abff, #1beabd);
-    box-shadow: inset 0 0 0px #fff,
-			0 0 0px #fff,
-			3px -3px 30px #1beabd, 
-			-3px 3px 30px #10abff;
+//     box-shadow: inset 0 0 0px #fff,
+// 			0 0 0px #fff,
+// 			3px -3px 30px #1beabd, 
+// 			-3px 3px 30px #10abff;
 	border-radius: 8px;		
 	width: 426px;
 	height: 169px;
@@ -654,10 +654,10 @@ nav ul li ul li a{
     transition: 0.2s;
     margin-top: 25px;
     border-radius: 10px;
-    box-shadow: 0 0 0px #fff,
-			0 0 0px #fff,
-			3px -3px 30px #1beabd, 
-			-3px 3px 30px #10abff;
+//     box-shadow: 0 0 0px #fff,
+// 			0 0 0px #fff,
+// 			3px -3px 30px #1beabd, 
+// 			-3px 3px 30px #10abff;
     border-style: hidden
     
 }
@@ -677,10 +677,10 @@ nav ul li ul li a{
     width: 100px;
     border: none;
     font-size: 16px;
-    box-shadow: 0 0 0px #fff,
-			0 0 0px #fff,
-			3px -3px 30px #1beabd, 
-			-3px 3px 30px #10abff;    // -webkit-appearance: button;
+//     box-shadow: 0 0 0px #fff,
+// 			0 0 0px #fff,
+// 			3px -3px 30px #1beabd, 
+// 			-3px 3px 30px #10abff;    // -webkit-appearance: button;
     outline: none;
 }
 
@@ -725,6 +725,7 @@ nav ul li ul li a{
     align-content: center;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
     top: 10px;
     width: 30%;
     /* right: 50%; */

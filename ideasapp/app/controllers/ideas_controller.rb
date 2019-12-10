@@ -61,23 +61,25 @@ class IdeasController < ApplicationController
     
     def uprank
         
-        @idea = Ideas.find(params[:id])
-        @idea.total_rank += 1;
-        
-        if @idea.update(ideas_params)
-            render 'index'
-        else
-            @idea = Idea.all
+        if @idea = Idea.find(params[:id])
+            @idea.total_rank += 1;
+            
+            if @idea.update(ideas_params)
+                render 'index'
+            else
+                @idea = Idea.all
+            end
         end
     end
     
     def downrank
-        @idea = Ideas.find(params[:id])
-        @idea.total_rank -= 1;
-        if @idea.update(ideas_params)
-            render 'index'
-        else
-            @idea = Idea.all
+        if @idea = Idea.find(params[:id])
+            @idea.total_rank -= 1;
+            if @idea.update(ideas_params)
+                render 'index'
+            else
+                @idea = Idea.all
+            end
         end
     end
     

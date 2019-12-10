@@ -3,7 +3,7 @@
 </head>
 
 <div class = "menu">
-   <a href = "#" class="brand">
+   <%= link_to ideas_path, class: "brand" do %> 
        <div class = "loader">
             <span></span>
             <span></span>
@@ -11,7 +11,8 @@
             <span></span> 
         </div>
         <p id = "loaderp">NUI</p>
-    </a>
+    <!--</a>-->
+    <% end %>
    <nav>
       <ul>
          <li><%= link_to 'Home', ideas_path %></li>
@@ -82,7 +83,7 @@
     </p>
     </div>
         
-<h1><%= link_to 'Back', ideas_path %></h1>
+<!--<h1><%= link_to 'Back', ideas_path %></h1>-->
 <%end%>
 </body>
 </section>
