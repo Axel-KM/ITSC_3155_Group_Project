@@ -29726,3 +29726,214 @@ Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
 ActiveRecord::RecordNotFound (Couldn't find Idea without an ID):
   
 app/controllers/ideas_controller.rb:64:in `uprank'
+Started GET "/" for 174.99.217.201 at 2019-12-12 02:44:28 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 591ms (Views: 581.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 174.99.217.201 at 2019-12-12 02:44:31 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:46
+  Rendered ideas/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 49ms (Views: 38.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/uprank.2" for 174.99.217.201 at 2019-12-12 02:44:35 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#uprank as 
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea without an ID):
+  
+app/controllers/ideas_controller.rb:64:in `uprank'
+Started GET "/ideas/5" for 174.99.217.201 at 2019-12-12 02:44:41 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 5]]
+  ↳ app/views/ideas/show.html.erb:156
+  Rendered ideas/show.html.erb within layouts/application (70.3ms)
+Completed 200 OK in 99ms (Views: 92.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ideas/uprank.5" for 174.99.217.201 at 2019-12-12 02:44:50 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#uprank as 
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea without an ID):
+  
+app/controllers/ideas_controller.rb:64:in `uprank'
+Started GET "/ideas/5/edit" for 174.99.217.201 at 2019-12-12 02:44:56 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:59
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 174.99.217.201 at 2019-12-12 02:45:13 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:46
+  Rendered ideas/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 174.99.217.201 at 2019-12-12 03:11:21 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 402ms (Views: 395.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 174.99.217.201 at 2019-12-12 03:11:23 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 174.99.217.201 at 2019-12-12 03:11:26 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:46
+  Rendered ideas/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas" for 174.99.217.201 at 2019-12-12 03:11:34 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:46
+  Rendered ideas/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 174.99.217.201 at 2019-12-12 03:11:39 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:46
+  Rendered ideas/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas" for 174.99.217.201 at 2019-12-12 03:17:51 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:46
+  Rendered ideas/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ideas/5" for 174.99.217.201 at 2019-12-12 03:17:54 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:55
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 5]]
+  ↳ app/views/ideas/show.html.erb:156
+  Rendered ideas/show.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ideas/uprank.5" for 174.99.217.201 at 2019-12-12 03:17:56 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#uprank as 
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea without an ID):
+  
+app/controllers/ideas_controller.rb:64:in `uprank'
+Started GET "/ideas" for 174.99.217.201 at 2019-12-12 03:17:58 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:46
+  Rendered ideas/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ideas/uprank.5" for 174.99.217.201 at 2019-12-12 03:18:00 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#uprank as 
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea without an ID):
+  
+app/controllers/ideas_controller.rb:64:in `uprank'
+Started GET "/ideas/new" for 174.99.217.201 at 2019-12-12 03:19:55 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 28.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ideas/new" for 174.99.217.201 at 2019-12-12 03:20:15 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 174.99.217.201 at 2019-12-12 03:21:51 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:46
+  Rendered ideas/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/uprank.5" for 174.99.217.201 at 2019-12-12 03:21:54 +0000
+Cannot render console from 174.99.217.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#uprank as 
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea without an ID):
+  
+app/controllers/ideas_controller.rb:64:in `uprank'

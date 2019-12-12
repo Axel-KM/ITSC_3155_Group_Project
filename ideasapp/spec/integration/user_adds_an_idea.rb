@@ -21,3 +21,26 @@ feature "User leaves a comment" do
         expect(page).to have_field("Body")
     end
 end
+
+feature "User destroys a comment" do
+    scenario "User successfully deletes a comment" do
+        visit ideas_path
+        expect(page).to have_content("Listing All Ideas")
+        click_link "Show"
+        expect(page).to have_content("Comments")
+        expect(page).to have_field("Commenter")
+        expect(page).to have_field("Body")
+        click_link "Destroy Comment"
+        
+    end
+end
+feature "User sorts by Music" do
+    scenario "User successfully leaves a rating" do
+        visit ideas_path
+        expect(page).to have_content("Listing All Ideas")
+        click_link "Categories"
+        click_link "Music"
+        espect(page).to have_content("Listing All Ideas")
+        
+    end
+end
